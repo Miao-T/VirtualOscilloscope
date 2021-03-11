@@ -38,7 +38,7 @@ ShowSource=1
 Freq=10000000
 MultiCoreRunAll=1
 [DebugChecksum]
-Checksum=1465631578
+Checksum=1462666393
 [Exceptions]
 StopOnUncaught=_ 0
 StopOnThrow=_ 0
@@ -46,8 +46,6 @@ StopOnThrow=_ 0
 ShowArgs=0
 [Disassembly]
 MixedMode=1
-[array_types]
-Fmt0=float[8]	4	0
 [watch_formats]
 Fmt0={W}42:warebuf	0	3
 [Disassemble mode]
