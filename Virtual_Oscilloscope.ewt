@@ -2458,6 +2458,9 @@
   <group>
     <name>user</name>
     <file>
+      <name>$PROJ_DIR$\user\adc_init.c</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\user\osc_main.c</name>
     </file>
     <file>

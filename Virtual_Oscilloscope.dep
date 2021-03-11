@@ -2,7 +2,7 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>1429127931</fileChecksum>
+  <fileChecksum>583087963</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
@@ -266,7 +266,9 @@
       <file>$TOOLKIT_DIR$\CMSIS\Include\core_cm3.h</file>
       <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
       <file>$TOOLKIT_DIR$\CMSIS\Include\cmsis_compiler.h</file>
-      <file>$PROJ_DIR$\user\inc\uart.h</file>
+      <file>$PROJ_DIR$\user\adc_init.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\adc_init.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\adc_init.pbi</file>
     </outputs>
     <file>
       <name>$PROJ_DIR$\lib\HAL_lib\HAL_pwr.c</name>
@@ -1233,7 +1235,7 @@
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 254 7 146 25 22 12 8 140 11 29 10 141 164 35 26 86 44 81 53 40 97 89 99 82 90 88 91 83 57 49 85 92 79 56 58 93 80 136 65 94 64 75 95 189 137 144 217 251 253 250 252</file>
+          <file> 254 261 7 146 25 22 12 8 140 11 29 10 141 164 35 26 86 44 81 53 40 97 89 99 82 90 88 91 83 57 49 85 92 79 56 58 93 80 136 65 94 64 75 95 189 137 144 217 251 253 250 252</file>
         </tool>
       </inputs>
     </file>
@@ -1310,11 +1312,11 @@
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 43 16 39 34 255 24 60 163 20 32 215 218 59 21 41 14 27 15 6 257 259 256 258 42 13 17 48 148 170 149 33 260 213 212 214</file>
+          <file> 43 16 39 34 255 24 60 163 20 32 215 218 59 21 41 14 27 15 6 257 259 256 258 42 13 17 48 148 170 149 33 213 212 214</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 32 16 170 163 27 34 218 41 42 59 48 260 20 60 39 15 259 256 215 14 13 148 149 213 255 24 21 6 257 33 212 43 258 17 214</file>
+          <file> 39 16 59 170 255 27 257 6 48 213 24 20 21 258 215 14 13 148 149 32 34 60 163 218 41 15 42 259 17 212 43 256 33 214</file>
         </tool>
       </inputs>
     </file>
@@ -1523,6 +1525,25 @@
           <file> 208</file>
         </tool>
       </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\user\adc_init.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 261</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 262</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 163 51 46 34 14 142 148 16 60 39 257 59 6 17 27 61 13 170 41 255 24 42 259 258 256 15</file>
+        </tool>
+      </inputs>
     </file>
   </configuration>
   <configuration>
