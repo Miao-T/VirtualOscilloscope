@@ -1,0 +1,366 @@
+###############################################################################
+#
+# IAR ELF Linker V7.80.4.12462/W32 for ARM                11/Mar/2021  14:03:24
+# Copyright 2007-2017 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Exe\Virtual_Oscilloscope.out
+#    Map file     =  
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\List\Virtual_Oscilloscope.map
+#    Command line =  
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\bsp.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\bsp_adc.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\bsp_can.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\bsp_comp.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\bsp_crs.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\bsp_dac.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\bsp_i2c.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\bsp_key.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\bsp_led.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\bsp_mco.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\bsp_opamp.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\bsp_spi.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\bsp_tim.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\bsp_uart.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\common.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_adc.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_aes.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_bkp.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_can.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_comp.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_crc.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_crs.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_dac.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_dbg.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_div.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_dma.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_exti.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_flash.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_gpio.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_i2c.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_iwdg.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_nvic.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_opamp.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_pwr.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_rcc.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_rtc.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_spi.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_sqrt.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_tim.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_uart.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_uid.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_wwdg.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\osc_main.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\startup_mm32.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\system_mm32.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\uart_init.o
+#        -o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Exe\Virtual_Oscilloscope.out
+#        --map
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\List\Virtual_Oscilloscope.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\config\linker\MindMotion\MM32L37xxx.icf" --semihosting --entry
+#        __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x0801ffff] { ro };
+"P2":  place in [from 0x20000000 to 0x20004fff] { rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind        Address   Size  Object
+  -------            ----        -------   ----  ------
+"A0":                                      0xf8
+  .intvec                     0x08000000   0xf8  <Block>
+    .intvec          const    0x08000000   0xf8  startup_mm32.o [1]
+                            - 0x080000f8   0xf8
+
+"P1":                                     0xcd5
+  .text              ro code  0x080000f8  0x360  system_mm32.o [1]
+  .text              ro code  0x08000458  0x25a  HAL_gpio.o [1]
+  .rodata            const    0x080006b2    0x2  osc_main.o [1]
+  .text              ro code  0x080006b4   0x80  HAL_bkp.o [1]
+  .text              ro code  0x08000734   0x78  common.o [1]
+  .text              ro code  0x080007ac  0x160  HAL_rcc.o [1]
+  .text              ro code  0x0800090c   0x7c  HAL_nvic.o [1]
+  .text              ro code  0x08000988  0x140  osc_main.o [1]
+  .text              ro code  0x08000ac8   0xd8  HAL_uart.o [1]
+  .text              ro code  0x08000ba0   0x60  bsp_uart.o [1]
+  .text              ro code  0x08000c00   0xbc  bsp.o [1]
+  .text              ro code  0x08000cbc   0x38  packbits_init_single.o [4]
+  .text              ro code  0x08000cf4   0x28  data_init.o [4]
+  .text              ro code  0x08000d1c   0x22  startup_mm32.o [1]
+  .text              ro code  0x08000d3e    0xc  cstartup_M.o [4]
+  .rodata            const    0x08000d4a    0x2  osc_main.o [1]
+  .text              ro code  0x08000d4c   0x1a  cmain.o [4]
+  .text              ro code  0x08000d66    0x4  exit.o [3]
+  .text              ro code  0x08000d6c    0xa  cexit.o [4]
+  .text              ro code  0x08000d78   0x14  exit.o [5]
+  .iar.init_table    const    0x08000d8c   0x10  - Linker created -
+  .rodata            const    0x08000d9c    0x0  packbits_init_single.o [4]
+  Initializer bytes  const    0x08000d9c   0x31  <for P2-1>
+                            - 0x08000dcd  0xcd5
+
+"P2", part 1 of 2:                         0x44
+  P2-1                        0x20000000   0x44  <Init block>
+    .data            inited   0x20000000   0x10  HAL_rcc.o [1]
+    .data            inited   0x20000010   0x20  osc_main.o [1]
+    .bss             inited   0x20000030    0x4  system_mm32.o [1]
+    .bss             inited   0x20000034    0x4  system_mm32.o [1]
+    .bss             inited   0x20000038    0x4  system_mm32.o [1]
+    .bss             inited   0x2000003c    0x4  system_mm32.o [1]
+    .bss             inited   0x20000040    0x1  system_mm32.o [1]
+    .bss             inited   0x20000041    0x1  system_mm32.o [1]
+    .bss             inited   0x20000042    0x1  system_mm32.o [1]
+    .bss             inited   0x20000043    0x1  system_mm32.o [1]
+                            - 0x20000044   0x44
+
+"P2", part 2 of 2:                        0x800
+  CSTACK                      0x20000048  0x800  <Block>
+    CSTACK           uninit   0x20000048  0x800  <Block tail>
+                            - 0x20000848  0x800
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x31 (72% of destination):
+          0x08000d9c  0x31
+    1 destination range, total size 0x44:
+          0x20000000  0x44
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj: [1]
+    HAL_bkp.o                   128
+    HAL_gpio.o                  602
+    HAL_nvic.o                  124
+    HAL_rcc.o                   352       11       16
+    HAL_uart.o                  216
+    bsp.o                       188
+    bsp_uart.o                   96
+    common.o                    120
+    osc_main.o                  320       27       32
+    startup_mm32.o               34      248
+    system_mm32.o               864       15       20
+    -------------------------------------------------
+    Total:                    3 044      301       68
+
+command line: [2]
+    -------------------------------------------------
+    Total:
+
+dl7M_tlf.a: [3]
+    exit.o                        4
+    -------------------------------------------------
+    Total:                        4
+
+rt7M_tl.a: [4]
+    cexit.o                      10
+    cmain.o                      26
+    cstartup_M.o                 12
+    data_init.o                  40
+    packbits_init_single.o       56
+    -------------------------------------------------
+    Total:                      144
+
+shb_l.a: [5]
+    exit.o                       20
+    -------------------------------------------------
+    Total:                       20
+
+    Gaps                          4
+    Linker created                        16    2 048
+-----------------------------------------------------
+    Grand Total:              3 216      317    2 116
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x08000d8c          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x08000d9c          --   Gb  - Linker created -
+.intvec$$Base           0x08000000          --   Gb  - Linker created -
+.intvec$$Limit          0x080000f8          --   Gb  - Linker created -
+?main                   0x08000d4d         Code  Gb  cmain.o [4]
+ADC1_2_IRQHandler       0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+AESEncrupt_IRQHandler   0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+AppTaskTick             0x08000a5b   0x1e  Code  Gb  osc_main.o [1]
+AppTickPtr              0x2000003c    0x4  Data  Gb  system_mm32.o [1]
+BKP_DeInit              0x080006b5   0x10  Code  Gb  HAL_bkp.o [1]
+BSP_UART_GPIO_CONFIGURE
+                        0x08000ba1   0x52  Code  Gb  bsp_uart.o [1]
+BusFault_Handler        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+CAN1_RX1_IRQHandler     0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+CAN1_SCE_IRQHandler     0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+COMMON_EnableIpClock    0x08000761   0x4c  Code  Gb  common.o [1]
+COMMON_NVIC_Configure   0x08000735   0x2c  Code  Gb  common.o [1]
+CSTACK$$Base            0x20000048          --   Gb  - Linker created -
+CSTACK$$Limit           0x20000848          --   Gb  - Linker created -
+DBGMCU_GetDEVID         0x08000185   0x9c  Code  Gb  system_mm32.o [1]
+DMA1_Channel1_IRQHandler
+                        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+DMA1_Channel2_IRQHandler
+                        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+DMA1_Channel3_IRQHandler
+                        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+DMA1_Channel4_IRQHandler
+                        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+DMA1_Channel5_IRQHandler
+                        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+DMA1_Channel6_IRQHandler
+                        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+DMA1_Channel7_IRQHandler
+                        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+DebugMon_Handler        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+Dummy_Handler           0x08000d3d    0x2  Code  Gb  startup_mm32.o [1]
+EXTI0_IRQHandler        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+EXTI15_10_IRQHandler    0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+EXTI1_IRQHandler        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+EXTI2_IRQHandler        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+EXTI3_IRQHandler        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+EXTI4_IRQHandler        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+EXTI9_5_IRQHandler      0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+FLASH_IRQHandler        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+GPIOA_ClockEnable       0x08000c9d    0xa  Code  Gb  bsp.o [1]
+GPIOB_ClockEnable       0x08000ca7    0xa  Code  Gb  bsp.o [1]
+GPIO_AF_Init            0x08000c01   0x30  Code  Gb  bsp.o [1]
+GPIO_Init               0x080004a9   0xa6  Code  Gb  HAL_gpio.o [1]
+GPIO_Mode_AF_PP_50MHz_Init
+                        0x08000c31   0x16  Code  Gb  bsp.o [1]
+GPIO_Mode_IN_Init       0x08000c47   0x2c  Code  Gb  bsp.o [1]
+GPIO_Mode_IPU_Init      0x08000c73   0x12  Code  Gb  bsp.o [1]
+GPIO_PinRemapConfig     0x0800057d  0x11c  Code  Gb  HAL_gpio.o [1]
+GPIO_PinRemapConfigSub  0x0800054f   0x22  Code  Gb  HAL_gpio.o [1]
+GPIO_checkBKP           0x08000459   0x50  Code  Gb  HAL_gpio.o [1]
+GPIOx_ClockEnable       0x08000c85   0x18  Code  Gb  bsp.o [1]
+HardFault_Handler       0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+I2C1_ER_IRQHandler      0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+I2C1_EV_IRQHandler      0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+I2C2_ER_IRQHandler      0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+I2C2_EV_IRQHandler      0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+MCUID                   0x20000043    0x1  Data  Gb  system_mm32.o [1]
+MemManage_Handler       0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+NMI_Handler             0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+NVIC_PriorityGroupConfig
+                        0x0800090d    0xa  Code  Gb  HAL_nvic.o [1]
+NVIC_SetPriority        0x080000f9   0x22  Code  Lc  system_mm32.o [1]
+PVD_IRQHandler          0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+PendSV_Handler          0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+RCC_AHBPeriphClockCmd   0x0800085d   0x28  Code  Gb  HAL_rcc.o [1]
+RCC_APB1PeriphClockCmd  0x080008ad   0x24  Code  Gb  HAL_rcc.o [1]
+RCC_APB2PeriphClockCmd  0x08000885   0x28  Code  Gb  HAL_rcc.o [1]
+RCC_BackupResetCmd      0x080008d1   0x14  Code  Gb  HAL_rcc.o [1]
+RCC_GetHCLKFreq         0x0800080f   0x1a  Code  Gb  HAL_rcc.o [1]
+RCC_GetPCLK1Freq        0x08000829   0x1a  Code  Gb  HAL_rcc.o [1]
+RCC_GetPCLK2Freq        0x08000843   0x1a  Code  Gb  HAL_rcc.o [1]
+RCC_GetSysClockFreq     0x080007ad   0x62  Code  Gb  HAL_rcc.o [1]
+RCC_IRQHandler          0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+RTCAlarm_IRQHandler     0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+RTC_IRQHandler          0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+Region$$Table$$Base     0x08000d8c          --   Gb  - Linker created -
+Region$$Table$$Limit    0x08000d9c          --   Gb  - Linker created -
+Reset_Handler           0x08000d1d    0x8  Code  Gb  startup_mm32.o [1]
+SPI1_IRQHandler         0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+SPI2_IRQHandler         0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+SVC_Handler             0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+SetSystemClock          0x080003cb   0x10  Code  Gb  system_mm32.o [1]
+SysTick_Config          0x0800011b   0x2e  Code  Lc  system_mm32.o [1]
+SysTick_Handler         0x08000149   0x3c  Code  Gb  system_mm32.o [1]
+SystemInit              0x08000221  0x1aa  Code  Gb  system_mm32.o [1]
+TAMPER_IRQHandler       0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+TIM1_BRK_IRQHandler     0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+TIM1_CC_IRQHandler      0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+TIM1_TRG_COM_IRQHandler
+                        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+TIM1_UP_IRQHandler      0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+TIM2_IRQHandler         0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+TIM3_IRQHandler         0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+TIM4_IRQHandler         0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+UART1_IRQHandler        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+UART2_IRQHandler        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+UART3_IRQHandler        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+UART_ClearITPendingBit  0x08000b9b    0x6  Code  Gb  HAL_uart.o [1]
+UART_Cmd                0x08000b55    0xe  Code  Gb  HAL_uart.o [1]
+UART_GetFlagStatus      0x08000b89   0x12  Code  Gb  HAL_uart.o [1]
+UART_ITConfig           0x08000b63   0x1c  Code  Gb  HAL_uart.o [1]
+UART_Init               0x08000ac9   0x6c  Code  Gb  HAL_uart.o [1]
+UART_SendData           0x08000b7f    0xa  Code  Gb  HAL_uart.o [1]
+UART_StructInit         0x08000b39   0x1c  Code  Gb  HAL_uart.o [1]
+USBWakeUp_IRQHandler    0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+USB_HP_CAN1_TX_IRQHandler
+                        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+USB_LP_CAN1_RX0_IRQHandler
+                        0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+UsageFault_Handler      0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+WDG_IRQHandler          0x08000d3d    0x2  Code  Wk  startup_mm32.o [1]
+__cmain                 0x08000d4d         Code  Gb  cmain.o [4]
+__exit                  0x08000d79   0x14  Code  Gb  exit.o [5]
+__iar_data_init3        0x08000cf5   0x28  Code  Gb  data_init.o [4]
+__iar_packbits_init_single3
+                        0x08000cbd   0x38  Code  Gb  packbits_init_single.o [4]
+__iar_program_start     0x08000d3f         Code  Gb  cstartup_M.o [4]
+__low_level_init        0x08000d25    0xe  Code  Gb  startup_mm32.o [1]
+__vector_table          0x08000000   0xf8  Data  Gb  startup_mm32.o [1]
+_call_main              0x08000d59         Code  Gb  cmain.o [4]
+_exit                   0x08000d6d         Code  Gb  cexit.o [4]
+_main                   0x08000d63         Code  Gb  cmain.o [4]
+exBKP_ImmRead           0x08000707   0x28  Code  Gb  HAL_bkp.o [1]
+exBKP_ImmWrite          0x080006e1   0x26  Code  Gb  HAL_bkp.o [1]
+exBKP_Init              0x080006c5   0x1c  Code  Gb  HAL_bkp.o [1]
+exGPIO_PinAFConfig      0x08000699   0x1a  Code  Gb  HAL_gpio.o [1]
+exNVIC_Init             0x08000917   0x5e  Code  Gb  HAL_nvic.o [1]
+exit                    0x08000d67    0x4  Code  Gb  exit.o [3]
+initUART1_IT            0x08000989   0x68  Code  Gb  osc_main.o [1]
+main                    0x08000a79   0x2a  Code  Gb  osc_main.o [1]
+nTimeOutCnt             0x20000030    0x4  Data  Gb  system_mm32.o [1]
+sysTickCnt              0x20000034    0x4  Data  Gb  system_mm32.o [1]
+sysTickFlag             0x20000041    0x1  Data  Gb  system_mm32.o [1]
+sysTickFlag1mS          0x20000040    0x1  Data  Gb  system_mm32.o [1]
+tbPresc                 0x20000000   0x10  Data  Gb  HAL_rcc.o [1]
+tickCnt                 0x20000038    0x4  Data  Gb  system_mm32.o [1]
+tickFlag                0x20000042    0x1  Data  Gb  system_mm32.o [1]
+usart1_putbuff          0x08000a0f   0x1a  Code  Gb  osc_main.o [1]
+usart1_send_char        0x080009f1   0x1e  Code  Gb  osc_main.o [1]
+vcan_sendware           0x08000a29   0x32  Code  Gb  osc_main.o [1]
+warebuf                 0x20000010   0x20  Data  Gb  osc_main.o [1]
+
+
+[1] = C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj
+[2] = command line
+[3] = dl7M_tlf.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  3 216 bytes of readonly  code memory
+    317 bytes of readonly  data memory
+  2 116 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
