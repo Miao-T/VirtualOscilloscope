@@ -60,6 +60,7 @@ The following codes refer to [「顶点元」STM32使用虚拟示波器][oscillo
    ```
 
 5. **Output triangle wave**
+  ![image](https://github.com/Miao-T/VirtualOscilloscope/blob/main/result_pic/triangle_wave.png)
 
 ## <font color=#990000>Solution: Output ADC Wave</font>
 
@@ -79,7 +80,7 @@ The following codes refer to [「顶点元」STM32使用虚拟示波器][oscillo
    ```C
    warebuf[1] = (float)ADC_ConvertedValue*(3.3/4096);
    ```
-
+  ![image](https://github.com/Miao-T/VirtualOscilloscope/blob/main/result_pic/ADC_wave.png)
 
 ## <font color=#990000>CSDN</font>
 
