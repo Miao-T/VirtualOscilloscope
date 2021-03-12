@@ -47,7 +47,7 @@ void PWR_DeInit(void)
     exRCC_APB1PeriphReset(RCC_APB1ENR_PWR);
 }
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308)|| defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308)|| defined(__MZ310)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief  Enables or disables access to the RTC and backup registers.
 /// @param  state: new state of the access to the RTC and backup

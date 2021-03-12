@@ -36,7 +36,7 @@
 /// @addtogroup DAC_Exported_Functions
 /// @{
 
-#if defined(__MT304)
+#if defined(__MM3N1)
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief  Deinitializes the DAC peripheral registers to their default reset values.

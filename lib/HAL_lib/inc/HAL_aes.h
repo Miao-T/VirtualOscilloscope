@@ -39,7 +39,7 @@
 /// @defgroup AES_Exported_Types
 /// @{
 
-#if defined(__MT304) || defined(__MZ306)
+#if defined(__MM3N1) || defined(__MZ306)
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief  AES Init structure definition

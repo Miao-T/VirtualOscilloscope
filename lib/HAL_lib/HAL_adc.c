@@ -44,18 +44,18 @@
 ////////////////////////////////////////////////////////////////////////////////
 void ADC_DeInit(ADC_TypeDef* ADCn)
 {
-#if !defined(__MZ311)    
+#if !defined(__MZ311)
     switch (*(u32*)&ADCn) {
         case ADC1_BASE: exRCC_APB2PeriphReset(RCC_APB2ENR_ADC1); break;
-#if defined(__MT304)
+#if defined(__MM3N1)
         case ADC2_BASE: exRCC_APB2PeriphReset(RCC_APB2ENR_ADC2); break;
 #endif
         default: break;
     }
 #else
-    exRCC_APB1PeriphReset(RCC_APB1ENR_ADC1);    
+    exRCC_APB1PeriphReset(RCC_APB1ENR_ADC1);
 #endif
-    
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -109,7 +109,7 @@ void ADC_Cmd(ADC_TypeDef* ADCn, FunctionalState state)
 /// @param 	state: New state of the selected ADC DMA transfer.
 /// @retval None.
 ////////////////////////////////////////////////////////////////////////////////
-#if !defined(__MZ311) 
+#if !defined(__MZ311)
 void ADC_DMACmd(ADC_TypeDef* ADCn, FunctionalState state)
 {
     (state) ? (ADCn->CR |= ADC_CR_DMAEN) : (ADCn->CR &= ~ADC_CR_DMAEN);
@@ -163,15 +163,15 @@ FlagStatus ADC_GetSoftwareStartConvStatus(ADC_TypeDef* ADCn)
 void ADC_RegularChannelConfig(ADC_TypeDef* ADCn, u32 channel, u8 rank, ADCSAM_TypeDef sampleTime)
 {
     if (rank == 0) rank = 0;    // unused
-    
+
     ADCn->CFGR &= ~ADC_CFGR_SAMCTL;
     ADCn->CFGR |= sampleTime;
-#if !defined(__MZ311)     
+#if !defined(__MZ311)
 	ADCn->CHSR &= ~(1 << channel);
 	ADCn->CHSR |=  (1 << channel);
 #endif
-    
-#if defined(__MT304)
+
+#if defined(__MM3N1)
     if (channel & ADC_CHSR_CHTV)
         ADC_TempSensorVrefintCmd(ENABLE);
 #endif
@@ -202,7 +202,7 @@ void ADC_ExternalTrigConvCmd(ADC_TypeDef* ADCn, FunctionalState state)
 ////////////////////////////////////////////////////////////////////////////////
 u32 ADC_GetConversionValue(ADC_TypeDef* ADCn)
 {
-    return ADCn->DR;
+    return ADCn->DR & 0x0000FFFF;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -287,7 +287,7 @@ void ADC_AnalogWatchdogSingleChannelConfig(ADC_TypeDef* ADCn, ADCCHANNEL_TypeDef
 ////////////////////////////////////////////////////////////////////////////////
 void ADC_TempSensorVrefintCmd(FunctionalState state)
 {
-#if defined(__MT304)
+#if defined(__MM3N1)
     (state) ? (ADC1->CFGR |=   ADC_CFGR_TVEN,  ADC2->CFGR |=  ADC_CFGR_TVEN)
             : (ADC1->CFGR &=  ~ADC_CFGR_TVEN,  ADC2->CFGR &= ~ADC_CFGR_TVEN);
 #endif
@@ -307,7 +307,7 @@ void ADC_TempSensorVrefintCmd(FunctionalState state)
 ////////////////////////////////////////////////////////////////////////////////
 void exADC_TempSensorVrefintCmd(u32 chs, FunctionalState state)
 {
-#if defined(__MT304)
+#if defined(__MM3N1)
 	if (chs & ADC_CHSR_CHTV) {
 		(state) ? (ADC1->CFGR |=   ADC_CFGR_TVEN,  ADC2->CFGR |=  ADC_CFGR_TVEN)
 				: (ADC1->CFGR &=  ~ADC_CFGR_TVEN,  ADC2->CFGR &= ~ADC_CFGR_TVEN);

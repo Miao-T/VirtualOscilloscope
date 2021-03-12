@@ -55,7 +55,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 void EXTI_DeInit()
 {
-#if defined(__MT304)
+#if defined(__MM3N1)
     // Clear all
 	exEXTI_LineDisable(~0x00000000);
 

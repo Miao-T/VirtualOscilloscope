@@ -118,7 +118,7 @@ typedef enum {
 
 void PWR_DeInit(void);
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308)|| defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308)|| defined(__MZ310)
 void PWR_BackupAccessCmd(FunctionalState state);
 #endif
 

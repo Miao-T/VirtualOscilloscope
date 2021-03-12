@@ -60,7 +60,7 @@ void BSP_UART_GPIO_Configure(UART_TypeDef* UARTx, bool remapEn, u8 remapIdx)
             GPIO_Mode_IPU_Init        (GPIOA,  GPIO_Pin_0,  NO_REMAP, GPIO_AF_1);
         }
         else{
-            
+
         }
         break;
         case (u32)UART2:
@@ -70,7 +70,7 @@ void BSP_UART_GPIO_Configure(UART_TypeDef* UARTx, bool remapEn, u8 remapIdx)
             GPIO_Mode_IPU_Init        (GPIOA,  GPIO_Pin_13, NO_REMAP, GPIO_AF_2);
         }
         else{
-            
+
         }
         break;
         default:break;
@@ -80,7 +80,7 @@ void BSP_UART_GPIO_Configure(UART_TypeDef* UARTx, bool remapEn, u8 remapIdx)
 void BSP_UART_GPIO_Configure(UART_TypeDef* UARTx, bool remapEn, u8 remapIdx)
 {
     GPIO_InitTypeDef 	GPIO_InitStructure;
-    
+
     switch (*(u32*)&UARTx) {
         case (u32)UART1:
         if (!remapEn) {
@@ -94,7 +94,7 @@ void BSP_UART_GPIO_Configure(UART_TypeDef* UARTx, bool remapEn, u8 remapIdx)
                 GPIO_Mode_AF_PP_20MHz_Init(GPIOB, GPIO_Pin_6, EXTI_MAPR_UART1, 	GPIO_AF_0);
                 GPIO_Mode_IPU_Init		  (GPIOB, GPIO_Pin_7, EXTI_MAPR_UART1, 	GPIO_AF_0);
             }
-            
+
 #if (__CORTEX_M == 0)
             else if (remapIdx == 1) {
                 GPIOA_ClockEnable();
@@ -133,7 +133,7 @@ void BSP_UART_GPIO_Configure(UART_TypeDef* UARTx, bool remapEn, u8 remapIdx)
 #endif
         }
         break;
-#if defined(__MT304)
+#if defined(__MM3N1)
         case (u32)UART3:
         if (!remapEn) {
             GPIOB_ClockEnable();
@@ -169,8 +169,8 @@ void BSP_UART_GPIO_CONFIGURE(UART_TypeDef* UARTx)
     }
 #if defined(UART3)
     else if (UART3 == UARTx) {
-        
-        
+
+
     }
 #endif
 }

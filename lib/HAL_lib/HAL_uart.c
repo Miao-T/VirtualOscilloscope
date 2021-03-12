@@ -48,7 +48,7 @@ void UART_DeInit(UART_TypeDef* UARTx)
 {
     switch (*(u32*)&UARTx) {
         case UART1_BASE:  // UART1_BASE:
-#if defined(__MZ311)        
+#if defined(__MZ311)
             exRCC_APB1PeriphReset(RCC_APB1ENR_UART1);
 #else
             exRCC_APB2PeriphReset(RCC_APB2ENR_UART1);
@@ -57,7 +57,7 @@ void UART_DeInit(UART_TypeDef* UARTx)
         case UART2_BASE:  // UART2_BASE:
             exRCC_APB1PeriphReset(RCC_APB1ENR_UART2);
             break;
-#if defined(__MT304)
+#if defined(__MM3N1)
         case UART3_BASE:  // UART3_BASE:
             exRCC_APB1PeriphReset(RCC_APB1ENR_UART2);
             break;
@@ -82,7 +82,7 @@ void UART_Init(UART_TypeDef* UARTx, UART_InitTypeDef* pInitStruct)
      * -----------------------*/
     MODIFY_REG(UARTx->CCR, UART_CCR_CHAR, pInitStruct->WordLength);
 
-#if defined(__MT304) || defined(__MZ306)
+#if defined(__MM3N1) || defined(__MZ306)
     MODIFY_REG(UARTx->CCR, UART_CCR_SPB, pInitStruct->StopBits);
 #endif
 
@@ -106,7 +106,7 @@ void UART_Init(UART_TypeDef* UARTx, UART_InitTypeDef* pInitStruct)
         apbclock = RCC_GetPCLK1Freq();
 #else
         apbclock = RCC_GetPCLK2Freq();
-#endif        
+#endif
     }
     else {
         apbclock = RCC_GetPCLK1Freq();
@@ -411,7 +411,7 @@ void UART_SendBreak(UART_TypeDef* UARTx)
 /// @brief  AutoBaudRate.
 /// @param  uart: Select the UART or the UART peripheral.
 /// @param  fedge: Former edge select:
-/// @param  ledge: Former edge select: 
+/// @param  ledge: Former edge select:
 /// @param  cnt: ENABLE/DISABLE.
 /// @retval None.
 ////////////////////////////////////////////////////////////////////////////////

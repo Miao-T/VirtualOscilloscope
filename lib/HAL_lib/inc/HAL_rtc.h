@@ -42,7 +42,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief RTC_interrupts_define
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ310)
 typedef enum {
     RTC_IT_OW  = RTC_CR_OWIE,   ///< Overflow interrupt
     RTC_IT_ALR = RTC_CR_ALRIE,  ///< Alarm interrupt
@@ -53,7 +53,7 @@ typedef enum {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief RTC_interrupts_flags
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ310)
 typedef enum {
     RTC_FLAG_RTOFF = RTC_CSR_RTOFF,  ///< RTC Operation OFF flag
     RTC_FLAG_RSF   = RTC_CSR_RSF,    ///< Registers Synchronized flag
@@ -91,7 +91,7 @@ GLOBAL	bool accessRTC;
 ////////////////////////////////////////////////////////////////////////////////
 /// @defgroup RTC_Exported_Functions
 /// @{
-#if defined(__MT304) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ310)
 void RTC_ITConfig(RTC_IT_TypeDef it, FunctionalState state);
 void RTC_ClearFlag(RTC_FLAG_TypeDef flag);
 void RTC_ClearITPendingBit(RTC_IT_TypeDef it);

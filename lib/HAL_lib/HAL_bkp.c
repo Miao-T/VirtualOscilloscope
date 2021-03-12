@@ -40,7 +40,7 @@
 /// @addtogroup BKP_Exported_Functions
 /// @{
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief  Deinitializes the BKP peripheral registers to their default reset
 /// 		values.
@@ -158,7 +158,7 @@ void BKP_ClearITPendingBit(void)
 }
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308)|| defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308)|| defined(__MZ310)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief  Writes user data to the specified Data Backup Register.
 /// @param  BKP_DR: specifies the Data Backup Register.
@@ -192,7 +192,7 @@ u16 BKP_ReadBackupRegister(BKPDR_Typedef BKP_DR)
 ////////////////////////////////////////////////////////////////////////////////
 void exBKP_Init(void)
 {
-#if defined(__MT304) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MT307)
 	COMMON_EnableIpClock(emCLOCK_PWR);
 	COMMON_EnableIpClock(emCLOCK_BKP);
 #endif

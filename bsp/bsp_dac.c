@@ -44,7 +44,7 @@
 /// @param  None.
 /// @retval None.
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304)
+#if defined(__MM3N1)
 void BSP_DAC_GPIO_Configure(u8 idx)
 {
 	#if defined(__REGISTER)

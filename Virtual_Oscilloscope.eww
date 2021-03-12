@@ -2,7 +2,10 @@
 
 <workspace>
   <project>
-    <path>$WS_DIR$\Virtual_Oscilloscope.ewp</path>
+    <path>$WS_DIR$\ADC_Wave.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\Triangle_Wave.ewp</path>
   </project>
   <batchBuild/>
 </workspace>

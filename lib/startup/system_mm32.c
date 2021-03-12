@@ -41,7 +41,7 @@
 /// @addtogroup MM32_Exported_Constants
 /// @{
 
-#if defined(__MT304)
+#if defined(__MM3N1)
 //	#define VECT_TAB_SRAM
 	#define VECT_TAB_OFFSET  0x0000
 #endif
@@ -134,7 +134,7 @@ EM_MCUID SystemInit(EM_SystemClock ClockSource, EM_SYSTICK tickEn , AppTick_fun 
         while(1); // Flash Latency not in range.
     }
 
-#if defined(RCC_CR_PLLON)    
+#if defined(RCC_CR_PLLON)
     // PLL on
     if ((ClockSource & 0x000F0) >> 4 == 2) {
         RCC->CR |= ((ClockSource & 0x0F000) << 14);
@@ -145,15 +145,15 @@ EM_MCUID SystemInit(EM_SystemClock ClockSource, EM_SYSTICK tickEn , AppTick_fun 
 #endif
 
 #if defined(USB)
-    RCC->CFGR |= (1 << RCC_CFGR_USBPRE_Pos) & RCC_CFGR_USBPRE;   
+    RCC->CFGR |= (1 << RCC_CFGR_USBPRE_Pos) & RCC_CFGR_USBPRE;
 #endif
-    
+
     // Set Oscillator
     if ((ClockSource & 0x0000F) == 0) {                                         // HSI
 #if defined(RCC_CR_HSI_72M)
-        (((ClockSource & 0xF0000) >> 16) == 1) ?  (RCC->CR &= ~RCC_CR_HSI_72M) : 
+        (((ClockSource & 0xF0000) >> 16) == 1) ?  (RCC->CR &= ~RCC_CR_HSI_72M) :
                                                 (RCC->CR |=  RCC_CR_HSI_72M);
-#endif                                     
+#endif
         RCC->CR |= RCC_CR_HSION;
         while (!(RCC->CR & RCC_CR_HSIRDY)); // Wait for HSI clock ready!
     } else if ((ClockSource & 0x0000F) == 1) {                                  // HSE
@@ -168,7 +168,7 @@ EM_MCUID SystemInit(EM_SystemClock ClockSource, EM_SYSTICK tickEn , AppTick_fun 
     } else {
         while (1);                                                              // Clock Source not in range
     }
-    
+
     // AHB, APB1, APB2
     RCC->CFGR |= RCC_CFGR_HPRE_DIV1;
     RCC->CFGR |= RCC_CFGR_PPRE1_DIV1;
@@ -178,10 +178,10 @@ EM_MCUID SystemInit(EM_SystemClock ClockSource, EM_SYSTICK tickEn , AppTick_fun 
     // Clock Switch to
     RCC->CFGR |= (((ClockSource & 0x000F0) >> 4) << RCC_CFGR_SW_Pos) & RCC_CFGR_SW;
     while (((RCC->CFGR & RCC_CFGR_SWS) >> 2) != ((ClockSource & 0x000F0) >> 4));
-    
+
     if (tickEn && pCallback != NULL)
         AppTickPtr = pCallback;
-    
+
     if (tickEn) {
         u32 clock = 8000000;
         u32 pre   = 1000000;
@@ -201,7 +201,7 @@ EM_MCUID SystemInit(EM_SystemClock ClockSource, EM_SYSTICK tickEn , AppTick_fun 
     } else {
         SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;
     }
-    
+
 #if (__CORTEX_M == 3U)
     #ifdef VECT_TAB_SRAM
         SCB->VTOR = SRAM_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal SRAM. */
@@ -209,7 +209,7 @@ EM_MCUID SystemInit(EM_SystemClock ClockSource, EM_SYSTICK tickEn , AppTick_fun 
         SCB->VTOR = FLASH_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal FLASH. */
     #endif
 #endif
-    
+
 	return DBGMCU_GetDEVID();
 }
 
@@ -225,10 +225,10 @@ EM_MCUID SetSystemClock(EM_SYSTICK enable , AppTick_fun callbackPtr)
 #if defined(__EX_AES)
 	return SystemInit(SYSCLK_HSI_72MHz, enable, callbackPtr);
 #else
-	#if defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ310)
+	#if defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ310)
 //		return SystemInit(SYSCLK_HSI_96MHz, enable, callbackPtr);
 //		return SystemInit(SYSCLK_HSI_72MHz, enable, callbackPtr);
-        return SystemInit(SYSCLK_HSE_12x, enable, callbackPtr);    
+        return SystemInit(SYSCLK_HSE_12x, enable, callbackPtr);
 	#endif
 
 	#if defined(__MZ309) || defined(__MZ311)

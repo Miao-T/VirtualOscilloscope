@@ -35,7 +35,7 @@
 /// @addtogroup CRC_Exported_Functions
 /// @{
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief  Resets the CRC Data register (DR).

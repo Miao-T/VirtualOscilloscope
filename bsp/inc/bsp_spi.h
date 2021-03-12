@@ -42,9 +42,9 @@
 #define SPI1_CONFIG     0
 
 #if (SPI1_CONFIG == 0)
-    #define SPI1_SCK_PORT   GPIOA       // GPIOB      
-    #define SPI1_SCK_BIT    GPIO_Pin_5  // GPIO_Pin_3 
-    #define SPI1_SCK_AF     GPIO_AF_0   // GPIO_AF_0 
+    #define SPI1_SCK_PORT   GPIOA       // GPIOB
+    #define SPI1_SCK_BIT    GPIO_Pin_5  // GPIO_Pin_3
+    #define SPI1_SCK_AF     GPIO_AF_0   // GPIO_AF_0
 
     #define SPI1_MISO_PORT  GPIOA       // GPIOB
     #define SPI1_MISO_BIT   GPIO_Pin_6  // GPIO_Pin_4
@@ -59,9 +59,9 @@
     #define SPI1_NSS_AF     GPIO_AF_0   // GPIO_AF_0
 #endif
 #if (SPI1_CONFIG == 1)
-    #define SPI1_SCK_PORT   GPIOB      
-    #define SPI1_SCK_BIT    GPIO_Pin_3 
-    #define SPI1_SCK_AF     GPIO_AF_0 
+    #define SPI1_SCK_PORT   GPIOB
+    #define SPI1_SCK_BIT    GPIO_Pin_3
+    #define SPI1_SCK_AF     GPIO_AF_0
 
     #define SPI1_MISO_PORT  GPIOB
     #define SPI1_MISO_BIT   GPIO_Pin_4
@@ -97,103 +97,103 @@
 #define SPI2_CONFIG     0
 
 #if (SPI2_CONFIG == 0)
-    #define SPI2_SCK_PORT   GPIOB       // GPIOB       // GPIOB       // GPIOB       // GPIOB      
+    #define SPI2_SCK_PORT   GPIOB       // GPIOB       // GPIOB       // GPIOB       // GPIOB
     #define SPI2_SCK_BIT    GPIO_Pin_13 // GPIO_Pin_12 // GPIO_Pin_14 // GPIO_Pin_15 // GPIO_Pin_10
-    #define SPI2_SCK_AF     GPIO_AF_0   // GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5  
+    #define SPI2_SCK_AF     GPIO_AF_0   // GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5
 
-    #define SPI2_MISO_PORT  GPIOB       // GPIOB       // GPIOB       // GPIOB       // GPIOA       // GPIOA       
-    #define SPI2_MISO_BIT   GPIO_Pin_14 // GPIO_Pin_13 // GPIO_Pin_15 // GPIO_Pin_12 // GPIO_Pin_12 // GPIO_Pin_13 
-    #define SPI2_MISO_AF    GPIO_AF_0   // GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_4   // GPIO_AF_4   
+    #define SPI2_MISO_PORT  GPIOB       // GPIOB       // GPIOB       // GPIOB       // GPIOA       // GPIOA
+    #define SPI2_MISO_BIT   GPIO_Pin_14 // GPIO_Pin_13 // GPIO_Pin_15 // GPIO_Pin_12 // GPIO_Pin_12 // GPIO_Pin_13
+    #define SPI2_MISO_AF    GPIO_AF_0   // GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_4   // GPIO_AF_4
 
-    #define SPI2_MOSI_PORT  GPIOB       // GPIOB       // GPIOB       // GPIOB      
+    #define SPI2_MOSI_PORT  GPIOB       // GPIOB       // GPIOB       // GPIOB
     #define SPI2_MOSI_BIT   GPIO_Pin_15 // GPIO_Pin_14 // GPIO_Pin_12 // GPIO_Pin_13
-    #define SPI2_MOSI_AF    GPIO_AF_0   // GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4  
+    #define SPI2_MOSI_AF    GPIO_AF_0   // GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4
 
-    #if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
-    #define SPI2_NSS_PORT   GPIOB       // GPIOB       // GPIOB       // GPIOB       // GPIOB      
+    #if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+    #define SPI2_NSS_PORT   GPIOB       // GPIOB       // GPIOB       // GPIOB       // GPIOB
     #define SPI2_NSS_BIT    GPIO_Pin_12 // GPIO_Pin_15 // GPIO_Pin_13 // GPIO_Pin_14 // GPIO_Pin_9
-    #define SPI2_NSS_AF     GPIO_AF_0   // GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5  
+    #define SPI2_NSS_AF     GPIO_AF_0   // GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5
     #endif
 
     #if defined(__MZ309)
-    #define SPI2_NSS_PORT   GPIOA       // GPIOA       // GPIOB       // GPIOB       // GPIOB       // GPIOB       // GPIOB     
+    #define SPI2_NSS_PORT   GPIOA       // GPIOA       // GPIOB       // GPIOB       // GPIOB       // GPIOB       // GPIOB
     #define SPI2_NSS_BIT    GPIO_Pin_0  // GPIO_Pin_2  // GPIO_Pin_12 // GPIO_Pin_15 // GPIO_Pin_13 // GPIO_Pin_14 // GPIO_Pin_9
-    #define SPI2_NSS_AF     GPIO_AF_3   // GPIO_AF_3   // GPIO_AF_0   // GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5 
+    #define SPI2_NSS_AF     GPIO_AF_3   // GPIO_AF_3   // GPIO_AF_0   // GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5
     #endif
 #endif
 #if (SPI2_CONFIG == 1)
-    #define SPI2_SCK_PORT   GPIOB       // GPIOB       // GPIOB       // GPIOB      
+    #define SPI2_SCK_PORT   GPIOB       // GPIOB       // GPIOB       // GPIOB
     #define SPI2_SCK_BIT    GPIO_Pin_12 // GPIO_Pin_14 // GPIO_Pin_15 // GPIO_Pin_10
-    #define SPI2_SCK_AF     GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5  
+    #define SPI2_SCK_AF     GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5
 
-    #define SPI2_MISO_PORT  GPIOB       // GPIOB       // GPIOB       // GPIOA       // GPIOA       
-    #define SPI2_MISO_BIT   GPIO_Pin_13 // GPIO_Pin_15 // GPIO_Pin_12 // GPIO_Pin_12 // GPIO_Pin_13 
-    #define SPI2_MISO_AF    GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_4   // GPIO_AF_4   
+    #define SPI2_MISO_PORT  GPIOB       // GPIOB       // GPIOB       // GPIOA       // GPIOA
+    #define SPI2_MISO_BIT   GPIO_Pin_13 // GPIO_Pin_15 // GPIO_Pin_12 // GPIO_Pin_12 // GPIO_Pin_13
+    #define SPI2_MISO_AF    GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_4   // GPIO_AF_4
 
-    #define SPI2_MOSI_PORT  GPIOB       // GPIOB       // GPIOB      
+    #define SPI2_MOSI_PORT  GPIOB       // GPIOB       // GPIOB
     #define SPI2_MOSI_BIT   GPIO_Pin_14 // GPIO_Pin_12 // GPIO_Pin_13
-    #define SPI2_MOSI_AF    GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4  
+    #define SPI2_MOSI_AF    GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4
 
-    #if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
-    #define SPI2_NSS_PORT   GPIOB       // GPIOB       // GPIOB       // GPIOB      
+    #if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+    #define SPI2_NSS_PORT   GPIOB       // GPIOB       // GPIOB       // GPIOB
     #define SPI2_NSS_BIT    GPIO_Pin_15 // GPIO_Pin_13 // GPIO_Pin_14 // GPIO_Pin_9
-    #define SPI2_NSS_AF     GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5  
+    #define SPI2_NSS_AF     GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5
     #endif
 
     #if defined(__MZ309)
-    #define SPI2_NSS_PORT   GPIOA       // GPIOB       // GPIOB       // GPIOB       // GPIOB       // GPIOB     
+    #define SPI2_NSS_PORT   GPIOA       // GPIOB       // GPIOB       // GPIOB       // GPIOB       // GPIOB
     #define SPI2_NSS_BIT    GPIO_Pin_2  // GPIO_Pin_12 // GPIO_Pin_15 // GPIO_Pin_13 // GPIO_Pin_14 // GPIO_Pin_9
-    #define SPI2_NSS_AF     GPIO_AF_3   // GPIO_AF_0   // GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5 
+    #define SPI2_NSS_AF     GPIO_AF_3   // GPIO_AF_0   // GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5
     #endif
 #endif
 #if (SPI2_CONFIG == 2)
-    #define SPI2_SCK_PORT   GPIOB       // GPIOB       // GPIOB      
+    #define SPI2_SCK_PORT   GPIOB       // GPIOB       // GPIOB
     #define SPI2_SCK_BIT    GPIO_Pin_14 // GPIO_Pin_15 // GPIO_Pin_10
-    #define SPI2_SCK_AF     GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5  
+    #define SPI2_SCK_AF     GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5
 
-    #define SPI2_MISO_PORT  GPIOB       // GPIOB       // GPIOA       // GPIOA       
-    #define SPI2_MISO_BIT   GPIO_Pin_15 // GPIO_Pin_12 // GPIO_Pin_12 // GPIO_Pin_13 
-    #define SPI2_MISO_AF    GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_4   // GPIO_AF_4   
+    #define SPI2_MISO_PORT  GPIOB       // GPIOB       // GPIOA       // GPIOA
+    #define SPI2_MISO_BIT   GPIO_Pin_15 // GPIO_Pin_12 // GPIO_Pin_12 // GPIO_Pin_13
+    #define SPI2_MISO_AF    GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_4   // GPIO_AF_4
 
-    #define SPI2_MOSI_PORT  GPIOB       // GPIOB      
+    #define SPI2_MOSI_PORT  GPIOB       // GPIOB
     #define SPI2_MOSI_BIT   GPIO_Pin_12 // GPIO_Pin_13
-    #define SPI2_MOSI_AF    GPIO_AF_3   // GPIO_AF_4  
+    #define SPI2_MOSI_AF    GPIO_AF_3   // GPIO_AF_4
 
-    #if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
-    #define SPI2_NSS_PORT   GPIOB       // GPIOB       // GPIOB      
+    #if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+    #define SPI2_NSS_PORT   GPIOB       // GPIOB       // GPIOB
     #define SPI2_NSS_BIT    GPIO_Pin_13 // GPIO_Pin_14 // GPIO_Pin_9
-    #define SPI2_NSS_AF     GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5  
+    #define SPI2_NSS_AF     GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5
     #endif
 
     #if defined(__MZ309)
-    #define SPI2_NSS_PORT   GPIOB       // GPIOB       // GPIOB       // GPIOB       // GPIOB     
+    #define SPI2_NSS_PORT   GPIOB       // GPIOB       // GPIOB       // GPIOB       // GPIOB
     #define SPI2_NSS_BIT    GPIO_Pin_12 // GPIO_Pin_15 // GPIO_Pin_13 // GPIO_Pin_14 // GPIO_Pin_9
-    #define SPI2_NSS_AF     GPIO_AF_0   // GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5 
+    #define SPI2_NSS_AF     GPIO_AF_0   // GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5
     #endif
 #endif
 #if (SPI2_CONFIG == 3)
-    #define SPI2_SCK_PORT   GPIOB       // GPIOB      
+    #define SPI2_SCK_PORT   GPIOB       // GPIOB
     #define SPI2_SCK_BIT    GPIO_Pin_15 // GPIO_Pin_10
-    #define SPI2_SCK_AF     GPIO_AF_4   // GPIO_AF_5  
+    #define SPI2_SCK_AF     GPIO_AF_4   // GPIO_AF_5
 
-    #define SPI2_MISO_PORT  GPIOB       // GPIOA       // GPIOA       
-    #define SPI2_MISO_BIT   GPIO_Pin_12 // GPIO_Pin_12 // GPIO_Pin_13 
-    #define SPI2_MISO_AF    GPIO_AF_4   // GPIO_AF_4   // GPIO_AF_4   
+    #define SPI2_MISO_PORT  GPIOB       // GPIOA       // GPIOA
+    #define SPI2_MISO_BIT   GPIO_Pin_12 // GPIO_Pin_12 // GPIO_Pin_13
+    #define SPI2_MISO_AF    GPIO_AF_4   // GPIO_AF_4   // GPIO_AF_4
 
-    #define SPI2_MOSI_PORT  GPIOB      
+    #define SPI2_MOSI_PORT  GPIOB
     #define SPI2_MOSI_BIT   GPIO_Pin_13
-    #define SPI2_MOSI_AF    GPIO_AF_4  
+    #define SPI2_MOSI_AF    GPIO_AF_4
 
-    #if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
-    #define SPI2_NSS_PORT   GPIOB       // GPIOB      
+    #if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+    #define SPI2_NSS_PORT   GPIOB       // GPIOB
     #define SPI2_NSS_BIT    GPIO_Pin_14 // GPIO_Pin_9
-    #define SPI2_NSS_AF     GPIO_AF_4   // GPIO_AF_5  
+    #define SPI2_NSS_AF     GPIO_AF_4   // GPIO_AF_5
     #endif
 
     #if defined(__MZ309)
-    #define SPI2_NSS_PORT   GPIOB       // GPIOB       // GPIOB       // GPIOB     
+    #define SPI2_NSS_PORT   GPIOB       // GPIOB       // GPIOB       // GPIOB
     #define SPI2_NSS_BIT    GPIO_Pin_15 // GPIO_Pin_13 // GPIO_Pin_14 // GPIO_Pin_9
-    #define SPI2_NSS_AF     GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5 
+    #define SPI2_NSS_AF     GPIO_AF_1   // GPIO_AF_3   // GPIO_AF_4   // GPIO_AF_5
     #endif
 #endif
 #define SPI2_MASTER_SCK_CONFIG()    {GPIO_Mode_AF_PP_50MHz_Init(SPI2_SCK_PORT,  SPI2_SCK_BIT,  NO_REMAP, SPI2_SCK_AF); }

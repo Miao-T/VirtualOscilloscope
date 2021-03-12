@@ -23,7 +23,7 @@
 // Files includes  -------------------------------------------------------------
 #include "types.h"
 #include "HAL_dma.h"
- 
+
 ////////////////////////////////////////////////////////////////////////////////
 /// @addtogroup MM32_Hardware_Abstract_Layer
 /// @{
@@ -36,7 +36,7 @@
 /// @addtogroup DMA_Exported_Functions
 /// @{
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief  Deinitializes the DMA Channeln registers to their default reset
 ///         values.

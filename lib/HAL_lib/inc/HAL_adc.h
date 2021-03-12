@@ -52,7 +52,7 @@ typedef enum {
     ADC_Channel_6 = 0x06,  					///< ADC Channel 6
     ADC_Channel_7 = 0x07,  					///< ADC Channel 7
 
-#if defined(__MT304)
+#if defined(__MM3N1)
     ADC_Channel_TempSensor 		= 0x08,  	///< Temperature sensor(ADC1) or internal
 	ADC_Channel_VoltReference  	= 0x08, 	///< Internal reference voltage(ADC2) channel
 #endif
@@ -82,7 +82,7 @@ typedef enum {
     ADC_Samctl_6_5 = ADC_CFGR_SAMCTL_6_5,  ///< ADC sample time select 6.5t
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) ||defined(__MZ308) || defined(__MZ309)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) ||defined(__MZ308) || defined(__MZ309)
     ADC_Samctl_1_5   = ADC_CFGR_SAMCTL_1_5,   ///< ADC sample time select 1.5t
     ADC_Samctl_7_5   = ADC_CFGR_SAMCTL_7_5,   ///< ADC sample time select 7.5t
     ADC_Samctl_13_5  = ADC_CFGR_SAMCTL_13_5,  ///< ADC sample time select 13.5t
@@ -149,10 +149,10 @@ typedef enum {
     ADC1_ExternalTrigConv_T3_TRIG 		= ADC_CR_T3_TRIG,
     ADC1_ExternalTrigConv_T3_CC1  		= ADC_CR_T3_CC1,
     ADC1_ExternalTrigConv_EXTI_11 		= ADC_CR_EXTI_11,
-#if !defined(__MZ311)    
-    ADC1_ExternalTrigConv_T2_CC2  		= ADC_CR_T2_CC2,   
-#endif    
-#if defined(__MT304)
+#if !defined(__MZ311)
+    ADC1_ExternalTrigConv_T2_CC2  		= ADC_CR_T2_CC2,
+#endif
+#if defined(__MM3N1)
     ADC1_ExternalTrigConv_T4_CC4  		= ADC_CR_T4_CC4,
     ADC2_ExternalTrigConv_T1_TRIG 		= ADC_CR_T1_TRIG,
     ADC2_ExternalTrigConv_T1_CC4  		= ADC_CR_T1_CC4,

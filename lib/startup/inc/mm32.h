@@ -19,7 +19,7 @@ typedef enum IRQn {
     PendSV_IRQn                     = -2,                                       ///< 14 Cortex-M0 Pend SV Interrupt
     SysTick_IRQn                    = -1,                                       ///< 15 Cortex-M0 System Tick Interrupt
 
-#if defined(__MT304)
+#if defined(__MM3N1)
     WDG_IRQn                        = 0,                                        ///< Window WatchDog Interrupt
     PVD_IRQn                        = 1,                                        ///< PVD through EXTI Line detection Interrupt
     TAMPER_IRQn                     = 2,                                        ///< Tamper Interrupt
@@ -269,7 +269,7 @@ typedef enum IRQn {
 
 } IRQn_Type;
 
-#if defined(__MT304) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MT307)
     #define __MPU_PRESENT               (0)                                     ///< mm32f103/mm32l3xx does not provide a MPU present or not
     #define __NVIC_PRIO_BITS            (4)                                     ///< mm32f103/mm32l3xx uses 4 Bits for the Priority Levels
     #define __Vendor_SysTickConfig      (0)                                     ///< Set to 1 if different SysTick Config is used
@@ -294,7 +294,7 @@ typedef enum IRQn {
     #define EEPROM_BASE                 (0x08100000U)                           ///< EEPROM base address in the alias region
 #endif
 
-#if defined(__MT304) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MT307)
     #define SRAM_BITBAND_BASE           (0x22000000U)                           ///< Peripheral base address in the bit-band region
     #define PERIPH_BITBAND_BASE         (0x42000000U)                           ///< SRAM base address in the bit-band region
 #endif
@@ -311,21 +311,21 @@ typedef enum IRQn {
 ////////////////////////////////////////////////////////////////////////////////
 
 #define ADC1_BASE                       (APB2PERIPH_BASE + 0x2400)              ///< Base Address: 0x40012400
-#if defined(__MT304) || defined(__MZ308)
+#if defined(__MM3N1) || defined(__MZ308)
     #define ADC2_BASE                   (APB2PERIPH_BASE + 0x2800)              ///< Base Address: 0x40012800
 #endif
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief AES Base Address Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307)
     #define AES_BASE                    (AHBPERIPH_BASE + 0x6000)               ///< Base Address: 0x40026000
 #endif
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief BKP Base Address Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define BKP_BASE                    (APB1PERIPH_BASE + 0x6C00)              ///< Base Address: 0x40006C00
 #endif
 
@@ -344,7 +344,7 @@ typedef enum IRQn {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief CAN Base Address Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
     #define CAN1_BASE                   (APB1PERIPH_BASE + 0x6400)              ///< Base Address: 0x40006400
 #endif
 
@@ -362,7 +362,7 @@ typedef enum IRQn {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief CRC Base Address Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) ||  defined(__MZ311)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) ||  defined(__MZ311)
 #define CRC_BASE                        (AHBPERIPH_BASE + 0x3000)               ///< Base Address: 0x40023000
 #endif
 
@@ -376,14 +376,14 @@ typedef enum IRQn {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief DAC Base Address Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define DAC_BASE                    (APB1PERIPH_BASE + 0x7400)              ///< Base Address: 0x40007400
 #endif
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief DBG Base Address Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MT307)
     #define DBG_BASE                    (APB1PERIPH_BASE + 0x7080)              ///< Base Address: 0x40007080
 #endif
 
@@ -401,7 +401,7 @@ typedef enum IRQn {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief DMA Base Address Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ306) ||defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) ||defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
 #define DMA1_BASE                       (AHBPERIPH_BASE + 0x0000)               ///< Base Address: 0x40020000
 #define DMA1_Channel1_BASE              (AHBPERIPH_BASE + 0x0008)               ///< Base Address: 0x40020008
 #define DMA1_Channel2_BASE              (AHBPERIPH_BASE + 0x001C)               ///< Base Address: 0x4002001C
@@ -410,7 +410,7 @@ typedef enum IRQn {
 #define DMA1_Channel5_BASE              (AHBPERIPH_BASE + 0x0058)               ///< Base Address: 0x40020058
 #endif
 
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define DMA1_Channel6_BASE          (AHBPERIPH_BASE + 0x006C)               ///< Base Address: 0x4002006C
     #define DMA1_Channel7_BASE          (AHBPERIPH_BASE + 0x0080)               ///< Base Address: 0x40020080
 #endif
@@ -443,7 +443,7 @@ typedef enum IRQn {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief GPIO Base Address Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define GPIOA_BASE                  (APB2PERIPH_BASE + 0x0800)              ///< Base Address: 0x40010800
     #define GPIOB_BASE                  (APB2PERIPH_BASE + 0x0C00)              ///< Base Address: 0x40010C00
     #define GPIOC_BASE                  (APB2PERIPH_BASE + 0x1000)              ///< Base Address: 0x40011000
@@ -469,7 +469,7 @@ typedef enum IRQn {
 /// @brief I2C Base Address Definition
 ////////////////////////////////////////////////////////////////////////////////
 #define I2C1_BASE                       (APB1PERIPH_BASE + 0x5400)              ///< Base Address: 0x40005400
-#if defined(__MT304) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MT307)
     #define I2C2_BASE                   (APB1PERIPH_BASE + 0x5800)              ///< Base Address: 0x40005800
 #endif
 
@@ -518,7 +518,7 @@ typedef enum IRQn {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief RTC Base Address Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
     #define RTC_BASE                    (APB1PERIPH_BASE + 0x2800)              ///< Base Address: 0x40002800
 #endif
 
@@ -527,7 +527,7 @@ typedef enum IRQn {
 ////////////////////////////////////////////////////////////////////////////////
 
 #define SPI1_BASE                       (APB2PERIPH_BASE + 0x3000)              ///< Base Address: 0x40003000
-#if defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MT307) || defined(__MZ310)
     #define SPI2_BASE                   (APB1PERIPH_BASE + 0x3800)              ///< Base Address: 0x40003800
 #endif
 #if defined(__MT307)
@@ -550,7 +550,7 @@ typedef enum IRQn {
     #define TIM2_BASE                   (APB1PERIPH_BASE + 0x0000)              ///< Base Address: 0x40000000
 #endif
 
-#if defined(__MT304) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MT307)
     #define TIM4_BASE                   (APB1PERIPH_BASE + 0x0800)              ///< Base Address: 0x40000800
 #endif
 
@@ -580,7 +580,7 @@ typedef enum IRQn {
 #define UART1_BASE                      (APB2PERIPH_BASE + 0x3800)              ///< Base Address: 0x40013800
 #define UART2_BASE                      (APB1PERIPH_BASE + 0x4400)              ///< Base Address: 0x40004400
 
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define UART3_BASE                  (APB1PERIPH_BASE + 0x4800)              ///< Base Address: 0x40004800
 #endif
 
@@ -596,7 +596,7 @@ typedef enum IRQn {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief USB Base Address Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
     #define USB_BASE                    (APB1PERIPH_BASE + 0x5C00)              ///< Base Address: 0x40005C00
 #endif
 
@@ -681,7 +681,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief AES Register Structure Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ306)
+#if defined(__MM3N1) || defined(__MZ306)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief Advanced Encryption Standard
 ////////////////////////////////////////////////////////////////////////////////
@@ -708,7 +708,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief BKP Register Structure Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ306)
+#if defined(__MM3N1) || defined(__MZ306)
 #define BKP_NUMBER  10
 
 typedef struct {
@@ -723,7 +723,7 @@ typedef struct {
     __IO u32 DR8;                                                               ///< BKP data register 8,                           offset: 0x20
     __IO u32 DR9;                                                               ///< BKP data register 9,                           offset: 0x24
     __IO u32 DR10;                                                              ///< BKP data register 10,                          offset: 0x28
-#if defined(__MT304)
+#if defined(__MM3N1)
     __IO u32 RTCCR;                                                             ///< RTC clock calibration register,                offset: 0x2C
     __IO u32 CR;                                                                ///< BKP control register,                          offset: 0x30
     __IO u32 CSR;                                                               ///< BKP control/status register,                   offset: 0x34
@@ -824,7 +824,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief CAN Register Structure Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief CAN basic
@@ -960,7 +960,7 @@ typedef struct {
 
 /// @brief CRC Register Structure Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
 typedef struct {
     __IO u32   DR;                                                              ///< CRC data register,                             offset: 0x00
     __IO u32   IDR;                                                             ///< CRC independent data register,                 offset: 0x04
@@ -986,7 +986,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief Digital to analog converter register
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304)
+#if defined(__MM3N1)
 typedef struct {
     __IO u32 CR;                                                                ///<  DAC control register,                         offset: 0x00
     __IO u32 SWTRIGR;                                                           ///<  DAC software trigger register,                offset: 0x04
@@ -1029,7 +1029,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief DMA Register Structure Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ306) ||defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) ||defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
 typedef struct {
     __IO u32 CCR;                                                               ///< DMA channel x configuration register           offset: 0x00
     __IO u32 CNDTR;                                                             ///< DMA channel x number of data register          offset: 0x04
@@ -1050,7 +1050,7 @@ typedef struct {
     __IO u32 CFGR;                                                              ///< SYSCFG configuration register,                 offset: 0x00
     u32 Reserved;                                                               ///< Reserved                                       offset: 0x04
 #endif
-#if defined(__MT304)
+#if defined(__MM3N1)
     u32 Reserved;                                                               ///< Reserved                                       offset: 0x00
     __IO u32 MAPR;                                                              ///< Multiplexed remapping registers,               offset: 0x04
 #endif
@@ -1059,7 +1059,7 @@ typedef struct {
     __IO u32 PADHYS;                                                            ///< PAD configutation register,                    offset: 0x18
     u32 Reserved1[0x100 - 0x07];                                                ///< Reserved space 0x04 * 0x100 = 0x400
 #endif
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309)
     u32 Reserved1[0x100 - 0x06];                                                ///< Reserved space
 #endif
 
@@ -1147,7 +1147,7 @@ typedef struct {
     __IO u32 AR;                                                                ///< Address Register                               offset: 0x14
     __IO u32 RESERVED;
     __IO u32 OBR;                                                               ///< Option bytes Register                          offset: 0x1C
-#if defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
     __IO u32 WRPR;                                                              ///< Write protect Register                         offset: 0x20
 #endif
 #if defined(__MT307)
@@ -1388,7 +1388,7 @@ typedef struct {
 /// @brief RCC Register Structure Definition
 ////////////////////////////////////////////////////////////////////////////////
 typedef struct {
-#if defined(__MT304)
+#if defined(__MM3N1)
     __IO u32 CR;                                                                ///< Control Register                               offset: 0x00
     __IO u32 CFGR;                                                              ///< Configuration Register                         offset: 0x04
     __IO u32 CIR;                                                               ///< Clock Interrupt Register                       offset: 0x08
@@ -1526,7 +1526,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief RTC Registers Structure Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
 typedef struct {
     __IO u32 CR;                                                                ///< Control Register,                      offset: 0x00
     __IO u32 CSR;                                                               ///< Control & Status Register,             offset: 0x04
@@ -1597,7 +1597,7 @@ typedef struct{
     __IO u32 BDTR;                                                              ///< TIM break and dead-time register,              offset: 0x44
     __IO u32 DCR;                                                               ///< TIM DMA control register,                      offset: 0x48
     __IO u32 DMAR;                                                              ///< TIM DMA address for full transfer register,    offset: 0x4C
-#if !(defined(__MT304) || defined(__MZ306) || defined(__MT307))
+#if !(defined(__MM3N1) || defined(__MZ306) || defined(__MT307))
     __IO u32 RESERVED0;                                                         ///< Reserved,                                      offset: 0x50
     __IO u32 CCMR3;                                                             ///< TIM capture/compare mode register 3,           offset: 0x54
     __IO u32 CCR5;                                                              ///< TIM capture/compare register 5,                offset: 0x58
@@ -1642,7 +1642,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief USB Register Structure Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
 typedef struct {
     __IO u32 TOP;                                                               ///< Top Register                                   offset: 0x00
     __IO u32 INT_STATE;                                                         ///< Interrupt State Register                       offset: 0x04
@@ -1670,7 +1670,7 @@ typedef struct {
 
     __IO u32 ADDR;                                                              ///< USB Address Register                           offset: 0x60
     __IO u32 EP_EN;                                                             ///< Endpoint Enable Register                       offset: 0x64
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307)
     __IO u32 RESERVED9[4];                                                      ///< Reserved                                       offset: 0x68
 #endif
 #if defined(__MZ310)
@@ -1681,7 +1681,7 @@ typedef struct {
 #endif
     __IO u32 TOG_CTRL1_4;                                                       ///< Toggle Control Register                        offset: 0x78
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307)
     __IO u32 RESERVED13;                                                        ///< Reserved                                       offset: 0x7C
 #endif
 #if defined(__MZ310)
@@ -1710,7 +1710,7 @@ typedef struct {
     __IO u32 EP3_AVIL;                                                          ///< EP3 Available Data Register                    offset: 0x10C
     __IO u32 EP4_AVIL;                                                          ///< EP4 Available Data Register                    offset: 0x110
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307)
     __IO u32 RESERVED36[11];                                                    ///< Reserved                                       offset: 0x114
 #endif
 #if defined(__MZ310)
@@ -1740,7 +1740,7 @@ typedef struct {
     __IO u32 EP3_FIFO;                                                          ///< EP3 FIFO Register                              offset: 0x16C
     __IO u32 EP4_FIFO;                                                          ///< EP4 FIFO Register                              offset: 0x170
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307)
     __IO u32 RESERVED50[4];                                                     ///< Reserved                                       offset: 0x174
 #endif
 #if defined(__MZ310)
@@ -1783,14 +1783,14 @@ typedef struct {
 /// @brief ADC type pointer Definition
 ////////////////////////////////////////////////////////////////////////////////
 #define ADC1                            ((ADC_TypeDef*) ADC1_BASE)
-#if defined(__MT304) || defined(__MZ308)
+#if defined(__MM3N1) || defined(__MZ308)
     #define ADC2                        ((ADC_TypeDef*) ADC2_BASE)
 #endif
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief AES type pointer Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307)
     #define AES                         ((AES_TypeDef*) AES_BASE)
 #endif
 
@@ -1817,7 +1817,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief CRC type pointer Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)  ||  defined(__MZ311)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)  ||  defined(__MZ311)
 #define CRC                             ((CRC_TypeDef*) CRC_BASE)
 #endif
 
@@ -1831,7 +1831,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief DAC type pointer Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define DAC                         ((DAC_TypeDef*) DAC_BASE)
 #endif
 
@@ -1850,7 +1850,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief DMA type pointer Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ306) ||defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) ||defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
     #define DMA1                        ((DMA_TypeDef*) DMA1_BASE)
     #define DMA1_ch1                    ((DMA_Channel_TypeDef*) DMA1_Channel1_BASE)
     #define DMA1_ch2                    ((DMA_Channel_TypeDef*) DMA1_Channel2_BASE)
@@ -1859,7 +1859,7 @@ typedef struct {
     #define DMA1_ch5                    ((DMA_Channel_TypeDef*) DMA1_Channel5_BASE)
 #endif
 
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define DMA1_ch6                    ((DMA_Channel_TypeDef*) DMA1_Channel6_BASE)
     #define DMA1_ch7                    ((DMA_Channel_TypeDef*) DMA1_Channel7_BASE)
 #endif
@@ -1962,7 +1962,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief RTC type pointer Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
     #define RTC                         ((RTC_TypeDef*)RTC_BASE)
 #endif
 
@@ -1970,7 +1970,7 @@ typedef struct {
 /// @brief SPI type pointer Definition
 ////////////////////////////////////////////////////////////////////////////////
 #define SPI1                            ((SPI_TypeDef*)SPI1_BASE)               ///< Base Address: 0x40003000
-#if defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MT307) || defined(__MZ310)
     #define SPI2                        ((SPI_TypeDef*)SPI2_BASE)               ///< Base Address: 0x40003800
 #endif
 #if defined(__MT307)
@@ -2027,7 +2027,7 @@ typedef struct {
 #define UART1                           ((UART_TypeDef*) UART1_BASE)
 #define UART2                           ((UART_TypeDef*) UART2_BASE)
 
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define UART3                       ((UART_TypeDef*) UART3_BASE)
 #endif
 
@@ -2043,7 +2043,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief USBD type pointer Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
     #define USB                         ((USB_TypeDef*) USB_BASE )
 #endif
 
@@ -2073,7 +2073,7 @@ typedef struct {
 #define  ADC_DR_CH5                     (0x05U << ADC_DR_CH_Pos)                ///< ADC Channel select  5
 #define  ADC_DR_CH6                     (0x06U << ADC_DR_CH_Pos)                ///< ADC Channel select  6
 
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define  ADC_DR_CH7                 (0x07U << ADC_DR_CH_Pos)                ///< ADC Channel select  7
     #define  ADC_DR_Sensor              (0x08U << ADC_DR_CH_Pos)                ///< ADC Channel select  8
 #endif
@@ -2120,7 +2120,7 @@ typedef struct {
 #define  ADC_CFGR_RSLTCTL_10            (0x02U << ADC_CFGR_RSLTCTL_Pos)         ///< ADC resolution select 10bit
 #define  ADC_CFGR_RSLTCTL_9             (0x03U << ADC_CFGR_RSLTCTL_Pos)         ///< ADC resolution select 9bit
 #define  ADC_CFGR_RSLTCTL_8             (0x04U << ADC_CFGR_RSLTCTL_Pos)         ///< ADC resolution select 8bit
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) ||defined(__MZ308) || defined(__MZ309)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) ||defined(__MZ308) || defined(__MZ309)
     #define  ADC_CFGR_SAMCTL_Pos        (10)
     #define  ADC_CFGR_SAMCTL_1_5        (0x00U << ADC_CFGR_SAMCTL_Pos)          ///< ADC sample time select 1.5t
     #define  ADC_CFGR_SAMCTL_7_5        (0x01U << ADC_CFGR_SAMCTL_Pos)          ///< ADC sample time select 7.5t
@@ -2148,7 +2148,7 @@ typedef struct {
     #define  ADC_CFGR_SAMCTL_6_5        (0x0BU  << ADC_CFGR_SAMCTL_Pos)         ///< ADC sample time select 6.5t
     #define  ADC_CFGR_SAMCTL_7_5        (0x0CU  << ADC_CFGR_SAMCTL_Pos)         ///< ADC sample time select 7.5t
 #endif
-#if defined(__MT304) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MT307)
     #define  ADC_CFGR_TVEN_Pos          (2)
     #define  ADC_CFGR_TVEN              (0x01U << ADC_CFGR_TVEN_Pos)            ///< Enable ADC sensor
 #endif
@@ -2162,7 +2162,7 @@ typedef struct {
     #define  ADC_CFGR_VEN               (0x01U << ADC_CFGR_VEN_Pos)             ///< Enable ADC voltage reference
 #endif
 
-#if defined(__MT304) || defined(__MZ306)
+#if defined(__MM3N1) || defined(__MZ306)
     #define  ADC_CFGR_PRE_Pos           (4)
     #define  ADC_CFGR_PRE               (0x07U << ADC_CFGR_PRE_Pos)             ///< ADC preclk
     #define  ADC_CFGR_PRE_2             (0x00U << ADC_CFGR_PRE_Pos)             ///< ADC preclk 2
@@ -2256,7 +2256,7 @@ typedef struct {
 #define  ADC_CR_LEFT                    (0x01U << ADC_CR_ALIGN_Pos)             ///< ADC data left align
 
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309)
     #define  ADC_CR_CMPCH_Pos           (12)
     #define  ADC_CR_CMPCH               (0x0FU << ADC_CR_CMPCH_Pos)             ///< CMPCH[15:12] ADC window compare channel0 convert data
     #define  ADC_CR_CMPCH_0             (0x00U << ADC_CR_CMPCH_Pos)             ///< Select Compare Channel 0 Conversion Results
@@ -2296,12 +2296,12 @@ typedef struct {
     #define  ADC_CR_CMPCH_ALL           (0x0FU << ADC_CR_CMPCH_Pos)             ///< Select Compare ALL Channel Conversion Results
 #endif
 
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define  ADC_CR_SYNCEN_Pos          (7)
     #define  ADC_CR_SYNCEN              (0x01U << ADC_CR_SYNCEN_Pos)            ///< Two ADC synchronous conversion enable
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307)
     #define ADC_CR_TRGSEL_Pos           (4)
     #define ADC_CR_TRGSEL               (0x07U << ADC_CR_TRGSEL_Pos)            ///< TRGSEL[6:4] ADC external trigger source select
     #define ADC_CR_T1_CC1               (0x00U << ADC_CR_TRGSEL_Pos)            ///< The external trigger source of the ADC is T1_CC1
@@ -2309,14 +2309,14 @@ typedef struct {
     #define ADC_CR_T1_CC3               (0x02U << ADC_CR_TRGSEL_Pos)            ///< The external trigger source of the ADC is T1_CC3
     #define ADC_CR_T2_CC2               (0x03U << ADC_CR_TRGSEL_Pos)            ///< The external trigger source of the ADC is T2_CC2
     #define ADC_CR_T3_TRIG              (0x04U << ADC_CR_TRGSEL_Pos)            ///< The external trigger source of the ADC is T3_TRIG
-    #if defined(__MT304)
+    #if defined(__MM3N1)
     #define ADC_CR_T4_CC4               (0x05U << ADC_CR_TRGSEL_Pos)            ///< The external trigger source of the ADC is T4_CC4
     #endif
     #define ADC_CR_T3_CC1               (0x06U << ADC_CR_TRGSEL_Pos)            ///< The external trigger source of the ADC is T3_CC1
     #define ADC_CR_EXTI_11              (0x07U << ADC_CR_TRGSEL_Pos)            ///< The external trigger source of the ADC is EXTI_11
 #endif
 
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define ADC_CR_T1_TRIG              (0x00U << ADC_CR_TRGSEL_Pos)            ///< The external trigger source of the ADC is T1_TRIG
     #define ADC_CR_T1_CC4               (0x01U << ADC_CR_TRGSEL_Pos)            ///< The external trigger source of the ADC is T1_CC4
     #define ADC_CR_T2_TRIG              (0x02U << ADC_CR_TRGSEL_Pos)            ///< The external trigger source of the ADC is T2_TRIG
@@ -2409,12 +2409,12 @@ typedef struct {
 #define  ADC_CHSR_CH5                   (0x01U << ADC_CHSR_CH5_Pos)             ///< Enable ADC channel 5
 #define  ADC_CHSR_CH6_Pos               (6)
 #define  ADC_CHSR_CH6                   (0x01U << ADC_CHSR_CH6_Pos)             ///< Enable ADC channel 6
-#if defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
     #define ADC_CHSR_CH7_Pos            (7)
     #define ADC_CHSR_CH7                (0x01U << ADC_CHSR_CH7_Pos)             ///< Enable ADC channel 7
 #endif
 
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define  ADC_CHSR_CHTV_Pos          (8)
     #define  ADC_CHSR_CHTV              (0x01U << ADC_CHSR_CHTV_Pos)            ///< Enable ADC sensor
     #define  ADC_CHSR_CHALL             (0x01FFU)                               ///< Enable ADC all channel
@@ -2492,7 +2492,7 @@ typedef struct {
 
 #define  ADC_SR_VALID_Pos               (8)
 #define  ADC_SR_OVERRUN_Pos             (20)
-#if defined(__MT304) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MT307)
     #define  ADC_SR_VALID               (0x01FFU << ADC_SR_VALID_Pos)           ///< VALID[16:9] ADC channel 0..8 valid flag
     #define  ADC_SR_OVERRUN             (0x01FFU << ADC_SR_OVERRUN_Pos)         ///< OVERRUN[28:20] ADC channel 0..8 data covered flag
 #endif
@@ -2589,7 +2589,7 @@ typedef struct {
 
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief AES_CR Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
@@ -2681,7 +2681,7 @@ typedef struct {
 #define BKP_DR_DATA_Pos                 (0)
 #define BKP_DR_DATA                     (0xFFFFU << BKP_DR_DATA)                ///< Backup data
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief BKP_RTCCR Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
@@ -3332,7 +3332,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief CRC_DR Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)  ||  defined(__MZ311)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)  ||  defined(__MZ311)
 #define CRC_DR_DATA_Pos                 (0)
 #define CRC_DR_DATA                     (0xFFFFFFFFU << CRC_DR_DATA_Pos)        ///< Data register bits
 ////////////////////////////////////////////////////////////////////////////////
@@ -3341,7 +3341,7 @@ typedef struct {
 #define CRC_IDR_DATA_Pos                (0)
 #define CRC_IDR_DATA                    (0xFFU << CRC_IDR_DATA_Pos)             ///< General-purpose 8-bit data register bits
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ308) || defined(__MZ309)  || defined(__MZ310)  ||  defined(__MZ311)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ308) || defined(__MZ309)  || defined(__MZ310)  ||  defined(__MZ311)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief CRC_CTRL Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
@@ -3431,7 +3431,7 @@ typedef struct {
     #define CRS_ICR_EXPT                (0x01U << CRS_ICR_EXPT_Pos)             ///< Expected SYNC clear flag
 #endif
 
-#if defined(__MT304)
+#if defined(__MM3N1)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief DAC_CR Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
@@ -3611,7 +3611,7 @@ typedef struct {
     #define DBGMCU_CR_WWDG_STOP_Pos     (9)
     #define DBGMCU_CR_WWDG_STOP         (0x01U << DBGMCU_CR_WWDG_STOP_Pos)      ///< Debug window watchdog stopped when core is halted
 
-#if defined(__MT304) || defined(__MZ306) ||defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) ||defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
     #define DBGMCU_CR_TIM_STOP_Pos      (10)
     #define DBGMCU_CR_TIM1_STOP         (0x01U << DBGMCU_CR_TIM_STOP_Pos)       ///< TIM1 counter stopped when core is halted
     #define DBGMCU_CR_TIM2_STOP         (0x02U << DBGMCU_CR_TIM_STOP_Pos)       ///< TIM2 counter stopped when core is halted
@@ -3624,7 +3624,7 @@ typedef struct {
     #define DBGMCU_CR_TIM16_STOP        (0x04U << DBGMCU_CR_TIMx_STOP_Pos)      ///< TIM3 counter stopped when core is halted
 #endif
 
-#if defined(__MT304) || defined(__MZ308) || defined(__MZ309)
+#if defined(__MM3N1) || defined(__MZ308) || defined(__MZ309)
     #define DBGMCU_CR_TIM4_STOP         (0x08U << DBGMCU_CR_TIM_STOP_Pos)       ///< TIM4 counter stopped when core is halted
 #endif
 
@@ -3679,7 +3679,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief DMA_ISR Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ306) ||defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) ||defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
     #define DMA_ISR_GIF1_Pos            (0)
     #define DMA_ISR_GIF1                (0x01U << DMA_ISR_GIF1_Pos)             ///< Channel 1 Global interrupt flag
     #define DMA_ISR_TCIF1_Pos           (1)
@@ -3722,7 +3722,7 @@ typedef struct {
     #define DMA_ISR_TEIF5               (0x01U << DMA_ISR_TEIF5_Pos)            ///< Channel 5 Transfer Error flag
 #endif
 
-#if defined(__MT304) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MT307)
     #define DMA_ISR_GIF6_Pos            (20)
     #define DMA_ISR_GIF6                (0x01U << DMA_ISR_GIF6_Pos)             ///< Channel 6 Global interrupt flag
     #define DMA_ISR_TCIF6_Pos           (21)
@@ -3744,7 +3744,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief DMA_IFCR Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ306) ||defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) ||defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
     #define DMA_IFCR_CGIF1_Pos          (0)
     #define DMA_IFCR_CGIF1              (0x01U << DMA_IFCR_CGIF1_Pos)           ///< Channel 1 Global interrupt clearr
     #define DMA_IFCR_CTCIF1_Pos         (1)
@@ -3787,7 +3787,7 @@ typedef struct {
     #define DMA_IFCR_CTEIF5             (0x01U << DMA_IFCR_CTEIF5_Pos)          ///< Channel 5 Transfer Error clear
 #endif
 
-#if defined(__MT304) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MT307)
     #define DMA_IFCR_CGIF6_Pos          (20)
     #define DMA_IFCR_CGIF6              (0x01U << DMA_IFCR_CGIF6_Pos)           ///< Channel 6 Global interrupt clear
     #define DMA_IFCR_CTCIF6_Pos         (21)
@@ -3809,7 +3809,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief DMA_CCR Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ306) ||defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) ||defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
     #define DMA_CCR_EN_Pos              (0)
     #define DMA_CCR_EN                  (0x01U << DMA_CCR_EN_Pos)               ///< Channel enabl
     #define DMA_CCR_TCIE_Pos            (1)
@@ -3854,7 +3854,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief DMA_CNDTR Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ306) ||defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) ||defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
     #define DMA_CNDTR_NDT_Pos           (0)
     #define DMA_CNDTR_NDT               (0xFFFFU << DMA_CNDTR_NDT_Pos)          ///< Number of data to Transfer
 
@@ -4115,12 +4115,12 @@ typedef struct {
 #define EXTI_IMR_16_Pos                 (16)
 #define EXTI_IMR_16                     (0x01U << EXTI_IMR_16_Pos)              ///< Interrupt Mask on line 16
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310) || defined(__MZ311)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310) || defined(__MZ311)
     #define EXTI_IMR_17_Pos             (17)
     #define EXTI_IMR_17                 (0x01U << EXTI_IMR_17_Pos)              ///< Interrupt Mask on line 17
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
     #define EXTI_IMR_18_Pos             (18)
     #define EXTI_IMR_18                 (0x01U << EXTI_IMR_18_Pos)              ///< Interrupt Mask on line 18
 #endif
@@ -4130,7 +4130,7 @@ typedef struct {
 #define EXTI_IMR_19                     (0x01U << EXTI_IMR_19_Pos)              ///< Interrupt Mask on line 19
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
     #define EXTI_IMR_20_Pos             (20)
     #define EXTI_IMR_20                 (0x01U << EXTI_IMR_20_Pos)              ///< Interrupt Mask on line 20
 #endif
@@ -4190,12 +4190,12 @@ typedef struct {
 #define EXTI_EMR_16_Pos                 (16)
 #define EXTI_EMR_16                     (0x01U << EXTI_EMR_16_Pos)              ///< Event Mask on line 16
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310) ||defined(__MZ311)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310) ||defined(__MZ311)
     #define EXTI_EMR_17_Pos             (17)
     #define EXTI_EMR_17                 (0x01U << EXTI_EMR_17_Pos)              ///< Event Mask on line 17
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
     #define EXTI_EMR_18_Pos             (18)
     #define EXTI_EMR_18                 (0x01U << EXTI_EMR_18_Pos)              ///< Event Mask on line 18
 #endif
@@ -4205,7 +4205,7 @@ typedef struct {
 #define EXTI_EMR_19                     (0x01U << EXTI_EMR_19_Pos)              ///< Event Mask on line 19
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307)|| defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307)|| defined(__MZ308) || defined(__MZ310)
     #define EXTI_EMR_20_Pos             (20)
     #define EXTI_EMR_20                 (0x01U << EXTI_EMR_20_Pos)              ///< Event Mask on line 20
 #endif
@@ -4265,12 +4265,12 @@ typedef struct {
 #define EXTI_RTSR_16_Pos                (16)
 #define EXTI_RTSR_16                    (0x01U << EXTI_RTSR_16_Pos)             ///< Rising trigger event configuration bit of line 16
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
     #define EXTI_RTSR_17_Pos            (17)
     #define EXTI_RTSR_17                (0x01U << EXTI_RTSR_17_Pos)             ///< Rising trigger event configuration bit of line 17
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310) || defined(__MZ311)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310) || defined(__MZ311)
     #define EXTI_RTSR_18_Pos            (18)
     #define EXTI_RTSR_18                (0x01U << EXTI_RTSR_18_Pos)             ///< Rising trigger event configuration bit of line 18
 #endif
@@ -4280,7 +4280,7 @@ typedef struct {
 #define EXTI_RTSR_19                    (0x01U << EXTI_RTSR_19_Pos)             ///< Rising trigger event configuration bit of line 19
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307)|| defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307)|| defined(__MZ308) || defined(__MZ310)
     #define EXTI_RTSR_20_Pos            (20)
     #define EXTI_RTSR_20                (0x01U << EXTI_RTSR_20_Pos)             ///< Rising trigger event configuration bit of line 20
 #endif
@@ -4340,12 +4340,12 @@ typedef struct {
 #define EXTI_FTSR_16_Pos                (16)
 #define EXTI_FTSR_16                    (0x01U << EXTI_FTSR_16_Pos)             ///< Falling trigger event configuration bit of line 16
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310) || defined(__MZ311)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310) || defined(__MZ311)
     #define EXTI_FTSR_17_Pos            (17)
     #define EXTI_FTSR_17                (0x01U << EXTI_FTSR_17_Pos)             ///< Falling trigger event configuration bit of line 17
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
     #define EXTI_FTSR_18_Pos            (18)
     #define EXTI_FTSR_18                (0x01U << EXTI_FTSR_18_Pos)             ///< Falling trigger event configuration bit of line 18
 #endif
@@ -4355,7 +4355,7 @@ typedef struct {
 #define EXTI_FTSR_19                    (0x01U << EXTI_FTSR_19_Pos)             ///< Falling trigger event configuration bit of line 19
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307)|| defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307)|| defined(__MZ308) || defined(__MZ310)
     #define EXTI_FTSR_20_Pos            (20)
     #define EXTI_FTSR_20                (0x01U << EXTI_FTSR_20_Pos)             ///< Falling trigger event configuration bit of line 20
 #endif
@@ -4415,12 +4415,12 @@ typedef struct {
 #define EXTI_SWIER_16_Pos               (16)
 #define EXTI_SWIER_16                   (0x01U << EXTI_SWIER_16_Pos)            ///< Software Interrupt on line  16
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310) || defined(__MZ311)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310) || defined(__MZ311)
     #define EXTI_SWIER_17_Pos           (17)
     #define EXTI_SWIER_17               (0x01U << EXTI_SWIER_17_Pos)            ///< Software Interrupt on line  17
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
     #define EXTI_SWIER_18_Pos           (18)
     #define EXTI_SWIER_18               (0x01U << EXTI_SWIER_18_Pos)            ///< Software Interrupt on line  18
 #endif
@@ -4430,7 +4430,7 @@ typedef struct {
 #define EXTI_SWIER_19                   (0x01U << EXTI_SWIER_19_Pos)            ///< Software Interrupt on line  19
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307)|| defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307)|| defined(__MZ308) || defined(__MZ310)
     #define EXTI_SWIER_20_Pos           (20)
     #define EXTI_SWIER_20               (0x01U << EXTI_SWIER_20_Pos)            ///< Software Interrupt on line  20
 #endif
@@ -4490,12 +4490,12 @@ typedef struct {
 #define EXTI_PR_16_Pos                  (16)
 #define EXTI_PR_16                      (0x01U << EXTI_PR_16_Pos)               ///< Pending bit 16
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310) ||defined(__MZ311)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310) ||defined(__MZ311)
     #define EXTI_PR_17_Pos              (17)
     #define EXTI_PR_17                  (0x01U << EXTI_PR_17_Pos)               ///< Pending bit 17
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
     #define EXTI_PR_18_Pos              (18)
     #define EXTI_PR_18                  (0x01U << EXTI_PR_18_Pos)               ///< Pending bit 18
 #endif
@@ -4505,7 +4505,7 @@ typedef struct {
 #define EXTI_PR_19                      (0x01U << EXTI_PR_19_Pos)               ///< Pending bit 19
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307)|| defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307)|| defined(__MZ308) || defined(__MZ310)
     #define EXTI_PR_20_Pos              (20)
     #define EXTI_PR_20                  (0x01U << EXTI_PR_20_Pos)               ///< Pending bit 20
 #endif
@@ -4541,7 +4541,7 @@ typedef struct {
 #define FLASH_ACR_LATENCY_2             (0x02U << FLASH_ACR_LATENCY_Pos)        ///< 2 waiting state
 #define FLASH_ACR_LATENCY_3             (0x03U << FLASH_ACR_LATENCY_Pos)        ///< 3 waiting state
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) ||defined(__MZ308)|| defined(__MZ309)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) ||defined(__MZ308)|| defined(__MZ309)
 #define FLASH_ACR_HLFCYA_Pos            (3)
 #define FLASH_ACR_HLFCYA                (0x01U << FLASH_ACR_HLFCYA_Pos)         ///< Flash Half Cycle Access Enable
 #endif
@@ -4614,7 +4614,7 @@ typedef struct {
 #define FLASH_OBR_OPTERR_Pos            (0)
 #define FLASH_OBR_OPTERR                (0x01U << FLASH_OBR_OPTERR_Pos)         ///< Option Byte Error
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309)
 #define FLASH_OBR_RDPRT_Pos             (1)
 #define FLASH_OBR_RDPRT                 (0x01U << FLASH_OBR_RDPRT_Pos)          ///< Read protection
 #define FLASH_OBR_USER_Pos              (2)
@@ -4626,7 +4626,7 @@ typedef struct {
 #define FLASH_OBR_WDG_SW                (0x01U << FLASH_OBR_WDG_SW_Pos)         ///< WDG_SW
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309)
 #define FLASH_OBR_RST_STOP              (0x02U << FLASH_OBR_USER_Pos)           ///< nRST_STOP
 #define FLASH_OBR_RST_STDBY             (0x04U << FLASH_OBR_USER_Pos)           ///< nRST_STDBY
 #endif
@@ -4959,7 +4959,7 @@ typedef struct {
 #define I2C_DR_CMD_Pos                  (8)
 #define I2C_DR_CMD                      (0x01U << I2C_DR_CMD_Pos)               ///< Read or write command
 
-#if defined(__MT304) || defined(__MZ306)
+#if defined(__MM3N1) || defined(__MZ306)
     #define I2C_DR_STOP_Pos             (9)
     #define I2C_DR_STOP                 (0x01U << I2C_DR_STOP_Pos)              ///< STOP signal enable
     #define I2C_DR_RESTART_Pos          (10)
@@ -6112,7 +6112,7 @@ typedef struct {
 #define PWR_CR_PVDE_Pos                 (4)
 #define PWR_CR_PVDE                     (0x01U  << PWR_CR_PVDE_Pos)             ///< Power Voltage Detector Enable
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
     #define PWR_CR_DBP_Pos              (8)
     #define PWR_CR_DBP                  (0x01U  << PWR_CR_DBP_Pos)              ///< Domain Write Protction
 #endif
@@ -6185,7 +6185,7 @@ typedef struct {
     #define  RCC_CR_HSITEN              (0x01U << RCC_CR_HSITEN_Pos)            ///< HSI internal temperature enable
 #endif
 
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define  RCC_CR_HSICAL_Pos          (8)
     #define  RCC_CR_HSICAL              (0xFFU << RCC_CR_HSICAL_Pos)            ///< Internal High Speed clock Calibration
     #define  RCC_CR_HSITRIM_Pos         (2)
@@ -6217,7 +6217,7 @@ typedef struct {
     #define  RCC_CR_STDBY_FS_WK         (0x01U << RCC_CR_STDBY_FS_WK_Pos)       ///< Quickly wake-up standby mode selection
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) ||defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) ||defined(__MZ310)
     #define  RCC_CR_PLLDIV_Pos          (20)
     #define  RCC_CR_PLLDIV              (0x07U << RCC_CR_PLLDIV_Pos)            ///< PLLDIV[2:0] bits
     #define  RCC_CR_PLLON_Pos           (24)
@@ -6235,7 +6235,7 @@ typedef struct {
     #define RCC_CFGR_SW                 (0x03U << RCC_CFGR_SW_Pos)              ///< SW[1:0] bits (System clock Switch)
     #define RCC_CFGR_SW_HSI_DIV6        (0x00U << RCC_CFGR_SW_Pos)              ///< HSI/6 selected as system clock
     #define RCC_CFGR_SW_HSE             (0x01U << RCC_CFGR_SW_Pos)              ///< HSE selected as system clock
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
     #define RCC_CFGR_SW_PLL             (0x02U << RCC_CFGR_SW_Pos)              ///< PLL selected as system clock
 #endif
 #if defined(__MZ309) || defined(__MZ311)
@@ -6249,7 +6249,7 @@ typedef struct {
     #define RCC_CFGR_SWS                (0x03U << RCC_CFGR_SWS_Pos)             ///< SWS[1:0] bits (System Clock Switch Status)
     #define RCC_CFGR_SWS_HSI_DIV6       (0x00U << RCC_CFGR_SWS_Pos)             ///< HSI/6 oscillator used as system clock
     #define RCC_CFGR_SWS_HSE            (0x01U << RCC_CFGR_SWS_Pos)             ///< HSE oscillator used as system clock
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
     #define RCC_CFGR_SWS_PLL            (0x02U << RCC_CFGR_SWS_Pos)             ///< PLL used as system clock
 #endif
 #if defined(__MZ309) || defined(__MZ311)
@@ -6297,19 +6297,19 @@ typedef struct {
     #define RCC_CFGR_CLK48MSEL          (0x01U << RCC_CFGR_CLK48MSEL_Pos)       ///< USB 48M clock source selection
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
     #define RCC_CFGR_PLLSRC_Pos         (16)
     #define RCC_CFGR_PLLSRC             (0x01U << RCC_CFGR_PLLSRC_Pos)          ///< PLL entry clock source
     #define RCC_CFGR_PLLXTPRE_Pos       (17)
     #define RCC_CFGR_PLLXTPRE           (0x01U << RCC_CFGR_PLLXTPRE_Pos)        ///< HSE divider for PLL entry
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
     #define RCC_CFGR_USBPRE_Pos         (22)
     #define RCC_CFGR_USBPRE             (0x03U << RCC_CFGR_USBPRE_Pos)          ///< USB prescaler BIT[1:0]
 #endif
 
-#if defined(__MT304) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MT307)
     #define RCC_CFGR_MCO_Pos            (24)
     #define RCC_CFGR_MCO                (0x07U << RCC_CFGR_MCO_Pos)             ///< MCO[2:0] bits (Microcontroller Clock Output)
     #define RCC_CFGR_MCO_NOCLOCK        (0x00U << RCC_CFGR_MCO_Pos)             ///< No clock
@@ -6383,7 +6383,7 @@ typedef struct {
     #define RCC_CIR_LSIRDYF_Pos         (0)
     #define RCC_CIR_LSIRDYF             (0x01U << RCC_CIR_LSIRDYF_Pos)          ///< LSI Ready Interrupt flag
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
     #define RCC_CIR_LSERDYF_Pos         (1)
     #define RCC_CIR_LSERDYF             (0x01U << RCC_CIR_LSERDYF_Pos)          ///< LSE Ready Interrupt flag
 #endif
@@ -6393,7 +6393,7 @@ typedef struct {
     #define RCC_CIR_HSERDYF_Pos         (3)
     #define RCC_CIR_HSERDYF             (0x01U << RCC_CIR_HSERDYF_Pos)          ///< HSE Ready Interrupt flag
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) ||  defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) ||  defined(__MZ308) || defined(__MZ310)
     #define RCC_CIR_PLLRDYF_Pos         (4)
     #define RCC_CIR_PLLRDYF             (0x01U << RCC_CIR_PLLRDYF_Pos)          ///< PLL Ready Interrupt flag
 #endif
@@ -6403,7 +6403,7 @@ typedef struct {
     #define RCC_CIR_LSIRDYIE_Pos        (8)
     #define RCC_CIR_LSIRDYIE            (0x01U << RCC_CIR_LSIRDYIE_Pos)         ///< LSI Ready Interrupt Enable
 
-#if defined(__MT304) || defined(__MT307)|| defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307)|| defined(__MZ310)
     #define RCC_CIR_LSERDYIE_Pos        (9)
     #define RCC_CIR_LSERDYIE            (0x01U << RCC_CIR_LSERDYIE_Pos)         ///< LSE Ready Interrupt Enable
 #endif
@@ -6413,7 +6413,7 @@ typedef struct {
     #define RCC_CIR_HSERDYIE_Pos        (11)
     #define RCC_CIR_HSERDYIE            (0x01U << RCC_CIR_HSIRDYIE_Pos)         ///< HSE Ready Interrupt Enable
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ306) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ306) || defined(__MZ308) || defined(__MZ310)
     #define RCC_CIR_PLLRDYIE_Pos        (12)
     #define RCC_CIR_PLLRDYIE            (0x01U << RCC_CIR_PLLRDYIE_Pos)         ///< PLL Ready Interrupt Enable
 #endif
@@ -6421,7 +6421,7 @@ typedef struct {
     #define RCC_CIR_LSIRDYC_Pos         (16)
     #define RCC_CIR_LSIRDYC             (0x01U << RCC_CIR_LSIRDYC_Pos)          ///< LSI Ready Interrupt Clear
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
     #define RCC_CIR_LSERDYC_Pos         (17)
     #define RCC_CIR_LSERDYC             (0x01U << RCC_CIR_LSERDYC_Pos)          ///< LSE Ready Interrupt Clear
 #endif
@@ -6431,7 +6431,7 @@ typedef struct {
     #define RCC_CIR_HSERDYC_Pos         (19)
     #define RCC_CIR_HSERDYC             (0x01U << RCC_CIR_HSERDYC_Pos)          ///< HSE Ready Interrupt Clear
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ306) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ306) || defined(__MZ308) || defined(__MZ310)
     #define RCC_CIR_PLLRDYC_Pos         (20)
     #define RCC_CIR_PLLRDYC             (0x01U << RCC_CIR_PLLRDYC_Pos)          ///< PLL Ready Interrupt Clear
 #endif
@@ -6442,11 +6442,11 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief RCC_APB2RSTR Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if  defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if  defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
     #define RCC_APB2RSTR_EXTI_Pos       (0)
     #define RCC_APB2RSTR_EXTI           (0x01U << RCC_APB2RSTR_EXTI_Pos)        ///< System Configuration register reset
 #endif
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define RCC_APB2RSTR_GPIOA_Pos      (2)
     #define RCC_APB2RSTR_GPIOA          (0x01U << RCC_APB2RSTR_GPIOA_Pos)       ///< I/O port A reset
     #define RCC_APB2RSTR_GPIOB_Pos      (3)
@@ -6459,7 +6459,7 @@ typedef struct {
     #define RCC_APB2RSTR_GPIOE          (0x01U << RCC_APB2RSTR_GPIOE_Pos)       ///< IO port E reset
 #endif
 
-#if defined(__MT304) || defined(__MZ308)
+#if defined(__MM3N1) || defined(__MZ308)
     #define RCC_APB2RSTR_ADC1_Pos       (9)
     #define RCC_APB2RSTR_ADC1           (0x01U << RCC_APB2RSTR_ADC1_Pos)        ///< ADC 1 interface reset
     #define RCC_APB2RSTR_ADC2_Pos       (10)
@@ -6476,7 +6476,7 @@ typedef struct {
     #define RCC_APB2RSTR_TIM8           (0x01U << RCC_APB2RSTR_TIM8_Pos)        ///< TIM8 Timer reset
 #endif
 
-#if  defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if  defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
     #define RCC_APB2RSTR_TIM1_Pos       (11)
     #define RCC_APB2RSTR_TIM1           (0x01U << RCC_APB2RSTR_TIM1_Pos)        ///< TIM1 Timer reset
     #define RCC_APB2RSTR_SPI1_Pos       (12)
@@ -6514,7 +6514,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief RCC_APB1RSTR Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if  defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if  defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
     #define RCC_APB1RSTR_TIM2_Pos       (0)
     #define RCC_APB1RSTR_TIM2           (0x01U << RCC_APB1RSTR_TIM2_Pos)        ///< Timer 2 reset
     #define RCC_APB1RSTR_TIM3_Pos       (1)
@@ -6538,11 +6538,11 @@ typedef struct {
     #define RCC_APB1RSTR_UART2_Pos      (17)
     #define RCC_APB1RSTR_UART2          (0x01U << RCC_APB1RSTR_UART2_Pos)       ///< UART 2 reset
 #endif
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define RCC_APB1RSTR_TIM4_Pos       (2)
     #define RCC_APB1RSTR_TIM4           (0x01U << RCC_APB1RSTR_TIM4_Pos)        ///< Timer 4 reset
 #endif
-#if  defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if  defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
     #define RCC_APB1RSTR_WWDG_Pos       (11)
     #define RCC_APB1RSTR_WWDG           (0x01U << RCC_APB1RSTR_WWDG_Pos)        ///< Window Watchdog reset
     #define RCC_APB1RSTR_SPI2_Pos       (14)
@@ -6550,20 +6550,20 @@ typedef struct {
     #define RCC_APB1RSTR_UART2_Pos      (17)
     #define RCC_APB1RSTR_UART2          (0x01U << RCC_APB1RSTR_UART2_Pos)       ///< UART 2 reset
 #endif
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define RCC_APB1RSTR_UART3_Pos      (18)
     #define RCC_APB1RSTR_UART3          (0x01U << RCC_APB1RSTR_UART3_Pos)       ///< UART 3 reset
 #endif
-#if  defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
+#if  defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
     #define RCC_APB1RSTR_I2C1_Pos       (21)
     #define RCC_APB1RSTR_I2C1           (0x01U << RCC_APB1RSTR_I2C1_Pos)        ///< I2C 1 reset
 #endif
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define RCC_APB1RSTR_I2C2_Pos       (22)
     #define RCC_APB1RSTR_I2C2           (0x01U << RCC_APB1RSTR_I2C2_Pos)        ///< I2C 2 reset
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MZ310)
     #define RCC_APB1RSTR_USB_Pos        (23)
     #define RCC_APB1RSTR_USB            (0x01U << RCC_APB1RSTR_USB_Pos)         ///< USB reset
     #define RCC_APB1RSTR_CAN_Pos        (25)
@@ -6576,7 +6576,7 @@ typedef struct {
     #define RCC_APB1RSTR_CRS_Pos        (27)
     #define RCC_APB1RSTR_CRS            (0x01U << RCC_APB1RSTR_CRS_Pos)         ///< CRS interface reset
 #endif
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define RCC_APB1RSTR_BKP_Pos        (27)
     #define RCC_APB1RSTR_BKP            (0x01U << RCC_APB1RSTR_BKP_Pos)         ///< Backup interface reset
 #endif
@@ -6585,11 +6585,11 @@ typedef struct {
     #define RCC_APB1RSTR_CRS_Pos        (27)
     #define RCC_APB1RSTR_CRS            (0x01U << RCC_APB1RSTR_CRS_Pos)         ///< CRS interface reset
 #endif
-#if  defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
+#if  defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
     #define RCC_APB1RSTR_PWR_Pos        (28)
     #define RCC_APB1RSTR_PWR            (0x01U << RCC_APB1RSTR_PWR_Pos)         ///< Power interface reset
 #endif
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define RCC_APB1RSTR_DAC_Pos        (29)
     #define RCC_APB1RSTR_DAC            (0x01U << RCC_APB1RSTR_DAC_Pos)         ///< DAC interface reset
 #endif
@@ -6615,7 +6615,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief RCC_AHBENR Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if  defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if  defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
     #define RCC_AHBENR_DMA1_Pos         (0)
     #define RCC_AHBENR_DMA1             (0x01U << RCC_AHBENR_DMA1_Pos)          ///< DMA clock enable
     #define RCC_AHBENR_SRAM_Pos         (2)
@@ -6625,7 +6625,7 @@ typedef struct {
     #define RCC_AHBENR_SRAM_Pos         (2)
     #define RCC_AHBENR_SRAM             (0x01U << RCC_AHBENR_SRAM_Pos)          ///< SRAM interface clock enable
 #endif
-#if defined(__MT304) || defined(__MZ306) || defined(__MZ309)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MZ309)
     #define RCC_AHBENR_FLITF_Pos        (4)
     #define RCC_AHBENR_FLITF            (0x01U << RCC_AHBENR_FLITF_Pos)         ///< FLITF clock enable
 #endif
@@ -6633,11 +6633,11 @@ typedef struct {
 #define RCC_AHBENR_FLASH_Pos            (4)
 #define RCC_AHBENR_FLASH                (0x01U << RCC_AHBENR_FLASH_Pos)         ///< FLASH clock enable
 #endif
-#if  defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
+#if  defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
     #define RCC_AHBENR_CRC_Pos          (6)
     #define RCC_AHBENR_CRC              (0x01U << RCC_AHBENR_CRC_Pos)           ///< Internal High Speed clock Calibration
 #endif
-#if defined(__MT304) || defined(__MZ306)
+#if defined(__MM3N1) || defined(__MZ306)
     #define RCC_AHBENR_AES_Pos          (7)
     #define RCC_AHBENR_AES              (0x01U << RCC_AHBENR_AES_Pos)           ///< AES clock enable
 #endif
@@ -6702,11 +6702,11 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief RCC_APB2ENR Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if  defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if  defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
     #define RCC_APB2ENR_EXTI_Pos        (0)
     #define RCC_APB2ENR_EXTI            (0x01U << RCC_APB2ENR_EXTI_Pos)         ///< EXTI register enable
 #endif
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define RCC_APB2ENR_GPIOA_Pos       (2)
     #define RCC_APB2ENR_GPIOA           (0x01U << RCC_APB2ENR_GPIOA_Pos)        ///< I/O port A clock enable
     #define RCC_APB2ENR_GPIOB_Pos       (3)
@@ -6718,11 +6718,11 @@ typedef struct {
     #define RCC_APB2ENR_GPIOE_Pos       (6)
     #define RCC_APB2ENR_GPIOE           (0x01U << RCC_APB2ENR_GPIOE_Pos)        ///< I/O port E clock enable
 #endif
-#if  defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if  defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
     #define RCC_APB2ENR_ADC1_Pos        (9)
     #define RCC_APB2ENR_ADC1            (0x01U << RCC_APB2ENR_ADC1_Pos)         ///< ADC 1 interface clock enable
 #endif
-#if defined(__MT304) || defined(__MZ308)
+#if defined(__MM3N1) || defined(__MZ308)
     #define RCC_APB2ENR_ADC2_Pos        (10)
     #define RCC_APB2ENR_ADC2            (0x01U << RCC_APB2ENR_ADC2_Pos)         ///< ADC 2 interface clock enable
 #endif
@@ -6731,7 +6731,7 @@ typedef struct {
     #define RCC_APB2ENR_TIM8_Pos        (13)
     #define RCC_APB2ENR_TIM8            (0x01U << RCC_APB2ENR_TIM8_Pos)         ///< TIM8 Timer reset
 #endif
-#if  defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if  defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
     #define RCC_APB2ENR_TIM1_Pos        (11)
     #define RCC_APB2ENR_TIM1            (0x01U << RCC_APB2ENR_TIM1_Pos)         ///< TIM1 Timer clock enable
     #define RCC_APB2ENR_SPI1_Pos        (12)
@@ -6782,7 +6782,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief RCC_APB1ENR Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if  defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if  defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
     #define RCC_APB1ENR_TIM2_Pos        (0)
     #define RCC_APB1ENR_TIM2            (0x01U << RCC_APB1ENR_TIM2_Pos)         ///< Timer 2 clock enable
     #define RCC_APB1ENR_TIM3_Pos        (1)
@@ -6806,11 +6806,11 @@ typedef struct {
     #define RCC_APB1ENR_UART2_Pos       (17)
     #define RCC_APB1ENR_UART2           (0x01U << RCC_APB1ENR_UART2_Pos)        ///<UART2 enable
 #endif
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define RCC_APB1ENR_TIM4_Pos        (2)
     #define RCC_APB1ENR_TIM4            (0x01U << RCC_APB1ENR_TIM4_Pos)         ///< Timer 4 clock enable
 #endif
-#if  defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if  defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
     #define RCC_APB1ENR_WWDG_Pos        (11)
     #define RCC_APB1ENR_WWDG            (0x01U << RCC_APB1ENR_WWDG_Pos)         ///< Window Watchdog clock enable
 
@@ -6820,20 +6820,20 @@ typedef struct {
     #define RCC_APB1ENR_UART2_Pos       (17)
     #define RCC_APB1ENR_UART2           (0x01U << RCC_APB1ENR_UART2_Pos)        ///< UART 2 clock enable
 #endif
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define RCC_APB1ENR_UART3_Pos       (18)
     #define RCC_APB1ENR_UART3           (0x01U << RCC_APB1ENR_UART3_Pos)        ///< UART 3 clock enable
 #endif
-#if  defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
+#if  defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
     #define RCC_APB1ENR_I2C1_Pos        (21)
     #define RCC_APB1ENR_I2C1            (0x01U << RCC_APB1ENR_I2C1_Pos)         ///< I2C 1 clock enable
 #endif
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define RCC_APB1ENR_I2C2_Pos        (22)
     #define RCC_APB1ENR_I2C2            (0x01U << RCC_APB1ENR_I2C2_Pos)         ///< I2C 2 clock enable
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MZ310)
     #define RCC_APB1ENR_USB_Pos         (23)
     #define RCC_APB1ENR_USB             (0x01U << RCC_APB1ENR_USB_Pos)          ///< USB clock enable
     #define RCC_APB1ENR_CAN_Pos         (25)
@@ -6851,15 +6851,15 @@ typedef struct {
     #define RCC_APB1ENR_CRS             (0x01U << RCC_APB1ENR_CRS_Pos)          ///< CRS interface clock enable
 #endif
 
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define RCC_APB1ENR_BKP_Pos         (27)
     #define RCC_APB1ENR_BKP             (0x01U << RCC_APB1ENR_BKP_Pos)          ///< Backup interface clock enable
 #endif
-#if  defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
+#if  defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
     #define RCC_APB1ENR_PWR_Pos         (28)
     #define RCC_APB1ENR_PWR             (0x01U << RCC_APB1ENR_PWR_Pos)          ///< Power interface clock enable
 #endif
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define RCC_APB1ENR_DAC_Pos         (29)
     #define RCC_APB1ENR_DAC             (0x01U << RCC_APB1ENR_DAC_Pos)          ///< DAC interface clock enable
 #endif
@@ -6920,7 +6920,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief RCC_BDCR Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ308) || defined(__MZ310)
     #define RCC_BDCR_LSEON_Pos          (0)
     #define RCC_BDCR_LSEON              (0x01U << RCC_BDCR_LSEON_Pos)           ///< External Low Speed oscillator enable
     #define RCC_BDCR_LSERDY_Pos         (1)
@@ -6949,7 +6949,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief RCC_CSR Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
     #define RCC_CSR_LSION_Pos           (0)
     #define RCC_CSR_LSION               (0x01U << RCC_CSR_LSION_Pos)            ///< Internal Low Speed oscillator enable
     #define RCC_CSR_LSIRDY_Pos          (1)
@@ -6965,7 +6965,7 @@ typedef struct {
     #define RCC_CSR_LOCKUPF_Pos         (23)
     #define RCC_CSR_LOCKUPF             (0x01U << RCC_CSR_LOCKUPF_Pos)          ///< CPU Lockup Reset Flag
 #endif
-#if defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310) || defined(__MZ311)
     #define RCC_CSR_RMVF_Pos            (24)
     #define RCC_CSR_RMVF                (0x01U << RCC_CSR_RMVF_Pos)             ///< Remove reset flag
     #define RCC_CSR_PINRSTF_Pos         (26)
@@ -7244,7 +7244,7 @@ typedef struct {
     #define RCC_CONFIG_FSTA             (0x01U << RCC_CONFIG_FSTA_Pos)          ///< Data prefetch module status bit
 #endif
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief RTC_CR Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
@@ -7433,7 +7433,7 @@ typedef struct {
 #define SPI_GCR_RXEN_Pos                (4)
 #define SPI_GCR_RXEN                    (0x01U << SPI_GCR_RXEN_Pos)             ///<  Receive enable bit
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
 #define SPI_GCR_RXTLF_Pos               (5)
 #define SPI_GCR_RXTLF                   (0x03U << SPI_GCR_RXTLF_Pos)            ///<  RX FIFO trigger level bit
 #define SPI_GCR_RXTLF_One               (0x00U << SPI_GCR_RXTLF_Pos)            ///<
@@ -7500,7 +7500,7 @@ typedef struct {
 /// @brief SPI_NSSR Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
 #define SPI_NSSR_NSS_Pos                (0)
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309)
     #define SPI_NSSR_NSS                (0x01U << SPI_NSSR_NSS_Pos)             ///<  Chip select output signal in Master mode
 #endif
 #if defined(__MZ310) || defined(__MZ311)
@@ -7590,7 +7590,7 @@ typedef struct {
 #define TIM_CR2_OIS4_Pos                (14)
 #define TIM_CR2_OIS4                    (0x01U << TIM_CR2_OIS4_Pos)             ///< Output Idle state 4 (OC4 output)
 
-#if !(defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ311))
+#if !(defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ311))
     #define TIM_CR2_OIS5_Pos            (16)
     #define TIM_CR2_OIS5                (0x01U << TIM_CR2_OIS5_Pos)             ///< Output Idle state 5 (OC5 output)
 #endif
@@ -7609,7 +7609,7 @@ typedef struct {
 #define TIM_SMCR_SMS_TRIGGER            (0x06U << TIM_SMCR_SMS_Pos)             ///< Slave Mode select: Trigger
 #define TIM_SMCR_SMS_EXTERNAL1          (0x07U << TIM_SMCR_SMS_Pos)             ///< Slave Mode select: External1
 
-#if !(defined(__MT304) || defined(__MZ306) || defined(__MZ311))
+#if !(defined(__MM3N1) || defined(__MZ306) || defined(__MZ311))
     #define TIM_SMCR_OCCS_Pos           (3)
     #define TIM_SMCR_OCCS               (0x01U << TIM_SMCR_OCCS_Pos)            ///< Output compare clear selection
 #endif
@@ -7677,7 +7677,7 @@ typedef struct {
 #define TIM_DIER_TD_Pos                 (14)
 #define TIM_DIER_TD                     (0x01U << TIM_DIER_TD_Pos)              ///< Trigger DMA request enable
 
-#if !(defined(__MT304) || defined(__MZ306) || defined(__MT307))
+#if !(defined(__MM3N1) || defined(__MZ306) || defined(__MT307))
     #define TIM_DIER_CC5I_Pos           (16)
     #define TIM_DIER_CC5I               (0x01U << TIM_DIER_CC5I_Pos)            ///< Capture/Compare 5 interrupt enable
     #define TIM_DIER_CC5D_Pos           (17)
@@ -7712,7 +7712,7 @@ typedef struct {
 #define TIM_SR_CC4O_Pos                 (12)
 #define TIM_SR_CC4O                     (0x01U << TIM_SR_CC4O_Pos)              ///< Capture/Compare 4 Overcapture Flag
 
-#if !(defined(__MT304) || defined(__MZ306) || defined(__MT307))
+#if !(defined(__MM3N1) || defined(__MZ306) || defined(__MT307))
     #define TIM_SR_CC5I_Pos             (16)
     #define TIM_SR_CC5I                 (0x01U << TIM_SR_CC5I_Pos)              ///< Capture/Compare 5 interrupt Flag
 #endif
@@ -7737,7 +7737,7 @@ typedef struct {
 #define TIM_EGR_BG_Pos                  (7)
 #define TIM_EGR_BG                      (0x01U << TIM_EGR_BG_Pos)               ///< Break Generation
 
-#if !(defined(__MT304) || defined(__MZ306) || defined(__MT307))
+#if !(defined(__MM3N1) || defined(__MZ306) || defined(__MT307))
     #define TIM_EGR_CC5G_Pos            (16)
     #define TIM_EGR_CC5G                (0x01U << TIM_EGR_CC5G_Pos)             ///< Capture/Compare 5 Generation
 #endif
@@ -7918,7 +7918,7 @@ typedef struct {
 #define TIM_CCER_CC4P_Pos               (13)
 #define TIM_CCER_CC4P                   (0x01U << TIM_CCER_CC4P_Pos)            ///< Capture/Compare 4 output Polarity
 
-#if !(defined(__MT304) || defined(__MZ306) || defined(__MT307))
+#if !(defined(__MM3N1) || defined(__MZ306) || defined(__MT307))
     #define TIM_CCER_CC5EN_Pos          (16)
     #define TIM_CCER_CC5EN              (0x01U << TIM_CCER_CC5EN_Pos)           ///< Capture/Compare 5 output enable
     #define TIM_CCER_CC5P_Pos           (17)
@@ -7933,7 +7933,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief TIM_CNT Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MT307)
     #define TIM_CNT_CNT                 (0xFFFFU)                               ///< Counter Value
 #else
     #define TIM_CNT_CNT                 (0xFFFFFFFFU)                           ///< Counter Value
@@ -7947,7 +7947,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief TIM_ARR Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MT307)
     #define TIM_ARR_ARR                 (0xFFFFU)                               ///< actual auto-reload Value
 #else
     #define TIM_ARR_ARR                 (0xFFFFFFFFU)                           ///< actual auto-reload Value
@@ -7958,7 +7958,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 #define TIM_RCR_REP                     (0xFFU)                                 ///< Repetition Counter Value
 
-#if !(defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309))
+#if !(defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309))
     #define TIM_RCR_REP_CNT_Pos         (8)
     #define TIM_RCR_REP_CNT             (0xFFU << TIM_RCR_REP_CNT_Pos)          ///< Repetition counter value of real-time writing
 #endif
@@ -7966,7 +7966,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief TIM_CCR1 Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MT307)
     #define TIM_CCR1_CCR1               (0xFFFFU)                               ///< Capture/Compare 1 Value
 #else
     #define TIM_CCR1_CCR1               (0xFFFFFFFFU)                           ///< Capture/Compare 1 Value
@@ -7975,7 +7975,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief TIM_CCR2 Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MT307)
     #define TIM_CCR2_CCR2               (0xFFFFU)                               ///< Capture/Compare 2 Value
 #else
     #define TIM_CCR2_CCR2               (0xFFFFFFFFU)                           ///< Capture/Compare 2 Value
@@ -7984,7 +7984,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief TIM_CCR3 Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MT307)
     #define TIM_CCR3_CCR3               (0xFFFFU)                               ///< Capture/Compare 3 Value
 #else
     #define TIM_CCR3_CCR3               (0xFFFFFFFFU)                           ///< Capture/Compare 3 Value
@@ -7993,7 +7993,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief TIM_CCR4 Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MT307)
     #define TIM_CCR4_CCR4               (0xFFFFU)                               ///< Capture/Compare 4 Value
 #else
     #define TIM_CCR4_CCR4               (0xFFFFFFFFU)                           ///< Capture/Compare 4 Value
@@ -8031,7 +8031,7 @@ typedef struct {
 #define TIM_BDTR_MOEN_Pos               (15)
 #define TIM_BDTR_MOEN                   (0x01U << TIM_BDTR_MOEN_Pos)            ///< Main Output enable
 
-#if !(defined(__MT304) || defined(__MZ306))
+#if !(defined(__MM3N1) || defined(__MZ306))
     #define TIM_BDTR_DOEN_Pos           (16)
     #define TIM_BDTR_DOEN               (0x01U << TIM_BDTR_DOEN_Pos)            ///< Direct Output enable
 #endif
@@ -8062,7 +8062,7 @@ typedef struct {
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief TIM_CCMR3 Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
-#if !(defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ311))
+#if !(defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ311))
     #define TIM_CCMR3_OC5FEN_Pos        (2)
     #define TIM_CCMR3_OC5FEN            (0x01U << TIM_CCMR3_OC5FEN_Pos)         ///< Output Compare 5 Fast enable
     #define TIM_CCMR3_OC5PEN_Pos        (3)
@@ -8078,7 +8078,7 @@ typedef struct {
     #define TIM_CCR5_CCR5               (0xFFFF)                                ///< Capture/Compare 5 Value
 #endif
 
-#if !(defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309))
+#if !(defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309))
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief TIM_PDER Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
@@ -8397,7 +8397,7 @@ typedef struct {
     #define UART_ABRCR_LATTER           (0x01U << UART_ABRCR_LATTER_Pos)
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief USB_TOP Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////
@@ -8704,7 +8704,7 @@ typedef struct {
 #define EP_MEM_EP_MEM                   (0x07U << DMA_NUMH_DMA_NUML_Pos)
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief EP_DMA Register Bit Definition
 ////////////////////////////////////////////////////////////////////////////////

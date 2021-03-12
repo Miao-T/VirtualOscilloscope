@@ -62,7 +62,7 @@ void BSP_RCC_GPIO_Configure(void)
 #if defined(__MZ311)
         GPIO_Mode_AF_PP_50MHz_Init(GPIOA, GPIO_Pin_7, NO_REMAP, GPIO_AF_3);
 #endif
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
 		GPIO_Mode_AF_PP_50MHz_Init(GPIOA, GPIO_Pin_8, NO_REMAP, GPIO_AF_0);
 #endif
 	#endif

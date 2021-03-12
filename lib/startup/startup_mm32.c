@@ -57,7 +57,7 @@ extern void __main     (void) __attribute__((noreturn)); 						///< PreeMain (C 
 
 
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304)
+#if defined(__MM3N1)
 #if defined(__KEIL)
 	const DeviceVectors __Vectors __attribute__((section ("RESET")));
 	const DeviceVectors __Vectors = {
@@ -85,7 +85,7 @@ extern void __main     (void) __attribute__((noreturn)); 						///< PreeMain (C 
 	.pfnPendSV_Handler     				= (void*)PendSV_Handler,                ///< PendSV Handler
 	.pfnSysTick_Handler    				= (void*)SysTick_Handler,               ///< SysTick Handler
 
-// Peripheral handlers	
+// Peripheral handlers
 	.pfnWDG_IRQHandler             		= (void*)WDG_IRQHandler,           		///< Window Watchdog
 	.pfnPVD_IRQHandler              	= (void*)PVD_IRQHandler,            	///< PVD through EXTI Line detect
 	.pfnTAMPER_IRQHandler           	= (void*)TAMPER_IRQHandler,         	///< Tamper
@@ -164,7 +164,7 @@ extern void __main     (void) __attribute__((noreturn)); 						///< PreeMain (C 
 	.pfnPendSV_Handler     				= (void*)PendSV_Handler,                ///< PendSV Handler
 	.pfnSysTick_Handler    				= (void*)SysTick_Handler,               ///< SysTick Handler
 
-// Peripheral handlers	
+// Peripheral handlers
 	.pfnWDG_IRQHandler                 	= (void*)WDG_IRQHandler,               	///< Window Watchdog
 	.pfnPVD_IRQHandler                  = (void*)PVD_IRQHandler,                ///< PVD through EXTI Line detect
 #if defined(__MZ306)
@@ -307,7 +307,7 @@ extern void __main     (void) __attribute__((noreturn)); 						///< PreeMain (C 
     .pfnTRNG_IRQHandler                 = (void*)TRNG_IRQHandler,               ///< TRNG
     .pfnUART7_IRQHandler                = (void*)UART7_IRQHandler,              ///< UART7
     .pfnUART8_IRQHandler                = (void*)UART8_IRQHandler,              ///< UART8
-} DeviceVectors 
+} DeviceVectors
 #endif
 
 
@@ -340,7 +340,7 @@ extern void __main     (void) __attribute__((noreturn)); 						///< PreeMain (C 
     .pfnPendSV_Handler     				= (void*)PendSV_Handler,             	///< PendSV Handler
     .pfnSysTick_Handler    				= (void*)SysTick_Handler,            	///< SysTick Handler
 
-// Peripheral handlers	
+// Peripheral handlers
     .pfnWDG_IRQHandler           		= (void*)WDG_IRQHandler,          		///< Window Watchdog and Independent Watchdog
     .pfnPVD_IRQHandler                  = (void*)PVD_IRQHandler,                ///< PVD through EXTI Line detect
     .pfnPWM_IRQHandler                  = (void*)PWM_IRQHandler,                ///< PWM Control interrupt
@@ -404,7 +404,7 @@ extern void __main     (void) __attribute__((noreturn)); 						///< PreeMain (C 
 	.pfnPendSV_Handler     				= (void*)PendSV_Handler,                ///< PendSV Handler
 	.pfnSysTick_Handler    				= (void*)SysTick_Handler,               ///< SysTick Handler
 
-// Peripheral handlers	
+// Peripheral handlers
     .pfnWDG_IRQHandler            		= (void*)WDG_IRQHandler,          		///< Window Watchdog and Independent Watchdog         // Window Watchdog
 	.pfnPVD_IRQHandler                  = (void*)PVD_IRQHandler,                ///< PVD through EXTI Line detect     			    // PVD through EXTI Line detect
 	.pfnPWM_IRQHandler                  = (void*)PWM_IRQHandler,                ///< PWM Control interrupt        					// PWM
@@ -466,7 +466,7 @@ extern void __main     (void) __attribute__((noreturn)); 						///< PreeMain (C 
 	.pfnPendSV_Handler     				= (void*)PendSV_Handler,                ///< PendSV Handler
 	.pfnSysTick_Handler    				= (void*)SysTick_Handler,               ///< SysTick Handler
 
-// Peripheral handlers	
+// Peripheral handlers
 	.pfnWDG_EXTI17_IRQHandler           = (void*)WDG_EXTI17_IRQHandler,         ///< Window Watchdog
 	.pfnPVD_IRQHandler                  = (void*)PVD_IRQHandler,                ///< PVD through EXTI Line detect
 	.pfnReserved6_Handler               = (void*)(0UL),        			        ///< Reserved10_Handler
@@ -533,7 +533,7 @@ int __low_level_init(void)
 #if defined(__KEIL)
 	return 0;
 #else
-#if defined(__MT304)
+#if defined(__MM3N1)
 	u32 *pSrc = __section_begin(".intvec");
     SCB->VTOR = ((u32) pSrc & SCB_VTOR_TBLOFF_Msk);
 #endif

@@ -46,7 +46,7 @@ void RCC_DeInit()
 {
     SET_BIT(RCC->CR, RCC_CR_HSION);
     CLEAR_BIT(RCC->CFGR, RCC_CFGR_SW);
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
     CLEAR_BIT(RCC->CR, RCC_CR_HSEON | RCC_CR_CSSON | RCC_CR_PLLON | RCC_CR_PLLDIV | RCC_CR_PLLMUL);
 #endif
 #if defined(__MZ309) || defined(__MZ311)
@@ -96,7 +96,7 @@ void RCC_HSEConfig(RCCHSE_TypeDef state)
 ////////////////////////////////////////////////////////////////////////////////
 FlagStatus RCC_GetFlagStatus(RCC_FLAG_TypeDef flag)
 {
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
     return ((((flag >> 5) == CR_REG_INDEX) ? RCC->CR : (((flag >> 5) == BDCR_REG_INDEX) ? RCC->BDCR : RCC->CSR)) &
             (1 << (flag & 0x1F)))
                ? SET : RESET;
@@ -201,7 +201,7 @@ void RCC_SYSCLKConfig(SYSCLK_TypeDef sysClkSrc)
     MODIFY_REG(RCC->CFGR, RCC_CFGR_SW, (sysClkSrc << RCC_CFGR_SW_Pos));
 }
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief  Configures the PLL clock source and DM DN factor.
 ///   This function must be used only when the PLL is disabled.
@@ -256,7 +256,7 @@ void RCC_PLLConfig(RCC_PLLSource_TypeDef pllSrc, RCC_PLLMul_TypeDef pllMul)
 }
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief  Configures the USB clock (USBCLK).
 /// @param  usbClkSrc: specifies the USB clock source.
@@ -331,7 +331,7 @@ void RCC_PCLK1Config(RCC_APB1_APB2_CLK_TypeDef HCLK)
     MODIFY_REG(RCC->CFGR, RCC_CFGR_PPRE1, HCLK);
 }
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307)  || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307)  || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief  Configures the High Speed APB clock (PCLK2).
 /// @param  HCLK: defines the APB2 clock divider. This clock is derived from
@@ -366,7 +366,7 @@ void RCC_ADCCLKConfig(RCC_ADCCLKSOURCE_TypeDef PCLK2)
     MODIFY_REG(RCC->CFGR, ADC_CFGR_PRE, PCLK2);
 }
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief  Configures the External Low Speed oscillator (LSE).
 /// @param  state: specifies the new state of the LSE.
@@ -439,7 +439,7 @@ void RCC_LSICmd(FunctionalState state)
 ////////////////////////////////////////////////////////////////////////////////
 u32 RCC_GetSysClockFreq(void)
 {
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
     u32 clock, mul, div;
 #endif
     switch (RCC->CFGR & RCC_CFGR_SWS) {
@@ -460,7 +460,7 @@ u32 RCC_GetSysClockFreq(void)
 			return HSI_48MHz;
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
 		case RCC_CFGR_SWS_PLL:
 			clock = READ_BIT(RCC->CFGR, RCC_CFGR_PLLSRC) ? (READ_BIT(RCC->CFGR, RCC_CFGR_PLLXTPRE) ? (HSE_VALUE >> 1) : HSE_VALUE)
 				: HSI_VALUE_PLL_ON;
@@ -471,7 +471,7 @@ u32 RCC_GetSysClockFreq(void)
 #endif
 
 		default:
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310) || defined(__MZ311)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310) || defined(__MZ311)
 			return HSI_DIV6;
 #endif
 #if defined(__MZ309)
@@ -500,7 +500,7 @@ u32 RCC_GetPCLK1Freq(void)
     return (RCC_GetHCLKFreq() >> tbPresc[(RCC->CFGR & RCC_CFGR_PPRE1) >> RCC_CFGR_PPRE1_Pos]);
 }
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief  Returns the PCLK2 frequency of different on chip clocks.
 /// @param  None.
@@ -525,7 +525,7 @@ void RCC_GetClocksFreq(RCC_ClocksTypeDef* clk)
     clk->SYSCLK_Frequency = RCC_GetSysClockFreq();
     clk->HCLK_Frequency   = RCC_GetHCLKFreq();
     clk->PCLK1_Frequency  = RCC_GetPCLK1Freq();
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
     clk->PCLK2_Frequency  = RCC_GetPCLK2Freq();
 #endif
 
@@ -596,12 +596,12 @@ void RCC_AHB1PeriphClockCmd(u32 RCC_AHB1Periph, FunctionalState state)
 
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)  || defined(__MZ311)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)  || defined(__MZ311)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief  Enables or disables the AHB peripheral clock.
 /// @param  AHBPeriph: specifies the AHB peripheral to gates its clock.
 ///   This parameter can be any combination of the following values:
-/// __MT304
+/// __MM3N1
 /// @arg RCC_AHBENR_DMA1, RCC_AHBENR_SRAM, RCC_AHBENR_FLITF,
 ///      RCC_AHBENR_CRC, RCC_AHBENR_AES
 /// __MZ306
@@ -632,13 +632,13 @@ void RCC_AHBPeriphClockCmd(u32 AHBPeriph, FunctionalState state)
 }
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief  Enables or disables the High Speed APB (APB2) peripheral clock.
 /// @param  APB2Periph: specifies the APB2 peripheral to gates its
 ///   clock.
 ///   This parameter can be any combination of the following values:
-/// __MT304
+/// __MM3N1
 /// @arg RCC_APB2ENR_EXTI, RCC_APB2ENR_GPIOA, RCC_APB2ENR_GPIOB,
 /// 	 RCC_APB2ENR_GPIOC, RCC_APB2ENR_GPIOD, RCC_APB2ENR_GPIOE,
 /// 	 RCC_APB2ENR_ADC1, RCC_APB2ENR_ADC2, RCC_APB2ENR_TIM1,
@@ -683,7 +683,7 @@ void RCC_APB2PeriphClockCmd(u32 APB2Periph, FunctionalState state)
 /// @param  APB1Periph: specifies the APB1 peripheral to gates its
 ///   clock.
 ///   This parameter can be any combination of the following values:
-/// __MT304
+/// __MM3N1
 /// @arg RCC_APB1ENR_TIM2, RCC_APB1ENR_TIM3, RCC_APB1ENR_TIM4,
 ///   	 RCC_APB1ENR_WWDG, RCC_APB1ENR_SPI2, RCC_APB1ENR_UART2,
 ///		 RCC_APB1ENR_UART3, RCC_APB1ENR_I2C1, RCC_APB1ENR_I2C2,
@@ -781,12 +781,12 @@ void RCC_AHB1PeriphResetCmd(u32 RCC_AHB1Periph, FunctionalState state)
 }
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief  Forces or releases High Speed APB (APB2) peripheral reset.
 /// @param  APB2Periph: specifies the APB2 peripheral to reset.
 ///   This parameter can be any combination of the following values:
-/// __MT304
+/// __MM3N1
 /// @arg RCC_APB2RSTR_EXTI, RCC_APB2RSTR_GPIOA, RCC_APB2RSTR_GPIOB,
 /// 	 RCC_APB2RSTR_GPIOC, RCC_APB2RSTR_GPIOD, RCC_APB2RSTR_GPIOE,
 /// 	 RCC_APB2RSTR_ADC1, RCC_APB2RSTR_ADC2, RCC_APB2RSTR_TIM1,
@@ -830,7 +830,7 @@ void RCC_APB2PeriphResetCmd(u32 APB2Periph, FunctionalState state)
 /// @brief  Forces or releases Low Speed APB (APB1) peripheral reset.
 /// @param  APB1Periph: specifies the APB1 peripheral to reset.
 ///   This parameter can be any combination of the following values:
-/// __MT304
+/// __MM3N1
 /// @arg RCC_APB1RSTR_TIM2, RCC_APB1RSTR_TIM3, RCC_APB1RSTR_TIM4,
 ///   	 RCC_APB1RSTR_WWDG, RCC_APB1RSTR_SPI2, RCC_APB1RSTR_UART2,
 ///		 RCC_APB1RSTR_UART3, RCC_APB1RSTR_I2C1, RCC_APB1RSTR_I2C2,
@@ -898,7 +898,7 @@ void RCC_AHBPeriphResetCmd(u32 AHBPeriph, FunctionalState state)
 }
 #endif
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief  Forces or releases the Backup domain reset.
 /// @param  state: new state of the Backup domain reset.
@@ -1016,7 +1016,7 @@ void RCC_ClearITPendingBit(u8 it)
 /// @brief  Forces or releases Low Speed APB (APB1) peripheral reset.
 /// @param  RCC_APB1Periph: specifies the APB1 peripheral to reset.
 ///   This parameter can be any combination of the following values:
-/// __MT304
+/// __MM3N1
 /// @arg RCC_APB1RSTR_TIM2, RCC_APB1RSTR_TIM3, RCC_APB1RSTR_TIM4,
 ///   	 RCC_APB1RSTR_WWDG, RCC_APB1RSTR_SPI2, RCC_APB1RSTR_UART2,
 ///		 RCC_APB1RSTR_UART3, RCC_APB1RSTR_I2C1, RCC_APB1RSTR_I2C2,
@@ -1050,18 +1050,18 @@ void exRCC_APB1PeriphReset(u32 RCC_APB1Periph)
 ////////////////////////////////////////////////////////////////////////////////
 void exRCC_BackupReset()
 {
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
     RCC->BDCR |=   RCC_BDCR_BDRST;
     RCC->BDCR &=  ~RCC_BDCR_BDRST;
 #endif
 }
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief  Forces or releases High Speed APB (APB2) peripheral reset.
 /// @param  RCC_APB2Periph: specifies the APB2 peripheral to reset.
 ///   This parameter can be any combination of the following values:
-/// __MT304
+/// __MM3N1
 /// @arg RCC_APB2RSTR_EXTI, RCC_APB2RSTR_GPIOA, RCC_APB2RSTR_GPIOB,
 /// 	 RCC_APB2RSTR_GPIOC, RCC_APB2RSTR_GPIOD, RCC_APB2RSTR_GPIOE,
 /// 	 RCC_APB2RSTR_ADC1, RCC_APB2RSTR_ADC2, RCC_APB2RSTR_TIM1,
@@ -1141,7 +1141,7 @@ ErrorStatus exRCC_Init(RCCInitStruct_TypeDef* para)
         FLASH->ACR |= (para->RCC_SystemClock & 0xF0000) >> RCC_LATENCY_TB;
 
 //------------------------------------------------------------------------------
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
 		// Set PLL
         if (((para->RCC_SystemClock & 0x000F0) >> RCC_SW_TB) == 2) {
 			RCC->CR |= RCC_CR_PLLON;
@@ -1151,7 +1151,7 @@ ErrorStatus exRCC_Init(RCCInitStruct_TypeDef* para)
 		RCC->CR |= (((para->RCC_SystemClock & 0x00F00) >> RCC_DIV_TB) << RCC_CR_PLLDIV_Pos) & RCC_CR_PLLDIV;  	// RCC_CR_PLLDIV
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
 		RCC->CFGR |= (para->RCC_PrescaleUSB << RCC_CFGR_USBPRE_Pos) & RCC_CFGR_USBPRE;                               					// RCC_CR_USB
 #endif
 
@@ -1160,7 +1160,7 @@ ErrorStatus exRCC_Init(RCCInitStruct_TypeDef* para)
 #endif
 
 //------------------------------------------------------------------------------
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
 		// Set Oscillator
         if (((para->RCC_SystemClock & 0x0000F) >> RCC_SRC_TB) == 0) {
 			RCC->CR |= RCC_CR_HSION;
@@ -1197,7 +1197,7 @@ ErrorStatus exRCC_Init(RCCInitStruct_TypeDef* para)
     // AHB, APB1, APB2
     RCC->CFGR |= (para->RCC_PrescaleAHB  << RCC_CFGR_HPRE_Pos)  & RCC_CFGR_HPRE;
     RCC->CFGR |= (para->RCC_PrescaleAPB1 << RCC_CFGR_PPRE1_Pos) & RCC_CFGR_PPRE1;
-#if defined(__MT304) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)
     RCC->CFGR |= (para->RCC_PrescaleAPB2 << RCC_CFGR_PPRE2_Pos) & RCC_CFGR_PPRE2;
 #endif
 

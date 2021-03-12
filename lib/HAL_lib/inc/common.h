@@ -45,7 +45,7 @@
 /// @defgroup COMMON_Exported_Types
 /// @{
 
-#if defined(__MT304)
+#if defined(__MM3N1)
 typedef enum {
 	emCLOCK_ADC1  =	0x109,
 	emCLOCK_ADC2  =	0x10A,

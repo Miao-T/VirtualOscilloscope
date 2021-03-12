@@ -2458,13 +2458,7 @@
   <group>
     <name>user</name>
     <file>
-      <name>$PROJ_DIR$\user\adc_init.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\user\osc_main.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\user\uart_init.c</name>
+      <name>$PROJ_DIR$\user\osc_adc.c</name>
     </file>
   </group>
 </project>

@@ -13,7 +13,7 @@
 #define ADDATA_CHANNELSEL_6             ADC_DR_CH6
 #define ADDATA_CHANNELSEL_7             ADC_DR_CH7
 
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define ADDATA_CHANNELSEL_Sensor    ADC_DR_Sensor
 #endif
 
@@ -43,7 +43,7 @@
 #define ADCFG_RSLTCTL_9                 ADC_CFGR_RSLTCTL_9
 #define ADCFG_RSLTCTL_8                 ADC_CFGR_RSLTCTL_8
 
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define ADCFG_TVSEN                 ADC_CFGR_TVEN
 #endif
 
@@ -117,7 +117,7 @@
 #define ADCR_CMPCH_14                   ADC_CR_CMPCH_14
 #define ADCR_CMPCH_ALL                  ADC_CR_CMPCH_ALL
 
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define ADCR_SYNCEN                 ADC_CR_SYNCEN
 #endif
 
@@ -129,12 +129,12 @@
 #define ADCR_TRGSEL_T3_TRGO             ADC_CR_T3_TRIG
 #define ADCR_TRGSEL_EXTI_11             ADC_CR_TRGSEL_EXTI_11
 
-#if defined(__MT304) || defined(__MZ306)
+#if defined(__MM3N1) || defined(__MZ306)
     #define ADCR_TRGSEL_Pos             ADC_CR_TRGSEL_Pos
     #define ADCR_TRGSEL_T3_CC1          ADC_CR_T3_CC1
 #endif
 
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define ADCR_TRGSEL_T4_CC4          ADC_CR_T4_CC4
     #define ADCR_TRGSEL_T1_TRGO         ADC_CR_T1_TRIG
     #define ADCR_TRGSEL_T1_CC4          ADC_CR_T1_CC4
@@ -186,7 +186,7 @@
 #define ADCHS_CHEN7                     ADC_CHSR_CH7
 #define ADCHS_ALL                       ADC_CHSR_CHALL
 
-#if defined(__MT304)
+#if defined(__MM3N1)
     #define ADCHS_SENSOREN              ADC_CHSR_CHTV
 #endif
 
@@ -250,7 +250,7 @@
     #define AES_IVR3                    AES_IVRn                                ///< AES Initialization Vector Register 3
 
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)  ||  defined(__MZ311)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ308) || defined(__MZ309) || defined(__MZ310)  ||  defined(__MZ311)
 #define CRC_DR_DR                       CRC_DR_DATA
 #define CRC_IDR_IDR                     CRC_IDR_DATA
 #endif
@@ -330,7 +330,7 @@
 #define DMA1_IT_HT5                     DMA_IFCR_CHTIF5                         //(0x00040000U)
 #define DMA1_IT_TE5                     DMA_IFCR_CTEIF5                         //(0x00080000U)
 
-#if defined(__MT304)
+#if defined(__MM3N1)
 #define DMA1_IT_GL6                     DMA_IFCR_CGIF6                          //(0x00100000U)
 #define DMA1_IT_TC6                     DMA_IFCR_CTCIF6                         //(0x00200000U)
 #define DMA1_IT_HT6                     DMA_IFCR_CHTIF6                         //(0x00400000U)
@@ -362,7 +362,7 @@
 #define DMA1_FLAG_HT5                   DMA_ISR_HTIF5                           //(0x00040000U)
 #define DMA1_FLAG_TE5                   DMA_ISR_TEIF5                           //(0x00080000U)
 
-#if defined(__MT304)
+#if defined(__MM3N1)
 #define DMA1_FLAG_GL6                   DMA_ISR_GIF6                            //(0x00100000U)
 #define DMA1_FLAG_TC6                   DMA_ISR_TCIF6                           //(0x00200000U)
 #define DMA1_FLAG_HT6                   DMA_ISR_HTIF6                           //(0x00400000U)
@@ -533,17 +533,17 @@
 #define EXTI_PR_PR15                    EXTI_PR_15
 #define EXTI_PR_PR16                    EXTI_PR_16
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
     #define EXTI_IMR_MR17               EXTI_IMR_17
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
     #define EXTI_IMR_MR18               EXTI_IMR_18
 #endif
 
 #define EXTI_IMR_MR19                   EXTI_IMR_19
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
     #define EXTI_IMR_MR20               EXTI_IMR_20
 #endif
 
@@ -560,17 +560,17 @@
     #define EXTI_IMR_MR24               EXTI_IMR_24
 #endif
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
     #define EXTI_EMR_MR17               EXTI_EMR_17
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
     #define EXTI_EMR_MR18               EXTI_EMR_18
 #endif
 
 #define EXTI_EMR_MR19                   EXTI_EMR_19
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
     #define EXTI_EMR_MR20               EXTI_EMR_20
 #endif
 
@@ -587,17 +587,17 @@
     #define EXTI_EMR_MR24               EXTI_EMR_24
 #endif
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
     #define EXTI_RTSR_MR17              EXTI_RTSR_17
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
     #define EXTI_RTSR_MR18              EXTI_RTSR_18
 #endif
 
 #define EXTI_RTSR_MR19                  EXTI_RTSR_19
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
     #define EXTI_RTSR_MR20              EXTI_RTSR_20
 #endif
 
@@ -614,17 +614,17 @@
     #define EXTI_RTSR_MR24              EXTI_RTSR_24
 #endif
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
     #define EXTI_FTSR_MR17              EXTI_FTSR_18
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
     #define EXTI_FTSR_MR18              EXTI_FTSR_18
 #endif
 
 #define EXTI_FTSR_MR19                  EXTI_FTSR_19
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
     #define EXTI_FTSR_MR20              EXTI_FTSR_20
 #endif
 
@@ -641,17 +641,17 @@
     #define EXTI_FTSR_MR24              EXTI_FTSR_24
 #endif
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
     #define EXTI_SWIER_MR17             EXTI_SWIER_17
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
     #define EXTI_SWIER_MR18             EXTI_SWIER_18
 #endif
 
 #define EXTI_SWIER_MR19                 EXTI_SWIER_19
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
     #define EXTI_SWIER_MR20             EXTI_SWIER_20
 #endif
 
@@ -668,17 +668,17 @@
     #define EXTI_SWIER_MR24             EXTI_SWIER_24
 #endif
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
     #define EXTI_PR_MR17                EXTI_PR_17
 #endif
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ310)
     #define EXTI_PR_MR18                EXTI_PR_18
 #endif
 
 #define EXTI_PR_MR19                    EXTI_PR_19
 
-#if defined(__MT304) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MZ306) || defined(__MT307) || defined(__MZ308) || defined(__MZ310)
     #define EXTI_PR_MR20                EXTI_PR_20
 #endif
 
@@ -868,7 +868,7 @@
 #define RCC_AHBPeriph_SRAM              RCC_AHBENR_SRAM
 #define RCC_AHBPeriph_FLITF             RCC_AHBENR_FLITF
 #define RCC_AHBPeriph_CRC               RCC_AHBENR_CRC
-#if defined(__MT304) || defined(__MZ306)
+#if defined(__MM3N1) || defined(__MZ306)
 #define RCC_AHBPeriph_AES               RCC_AHBENR_AES
 #endif
 #if defined(__MZ306) || defined(__MZ308) || defined(__MZ309)
@@ -896,7 +896,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 /// @defgroup APB2_peripheral
 /// @{
-#if defined(__MT304)
+#if defined(__MM3N1)
 #define RCC_APB2Periph_AFIO             RCC_APB2ENR_EXTI
 #define RCC_APB2Periph_GPIOA            RCC_APB2ENR_GPIOA
 #define RCC_APB2Periph_GPIOB            RCC_APB2ENR_GPIOB
@@ -934,7 +934,7 @@
 /// @{
 #define RCC_APB1Periph_TIM2             RCC_APB1ENR_TIM2
 #define RCC_APB1Periph_TIM3             RCC_APB1ENR_TIM3
-#if defined(__MT304)
+#if defined(__MM3N1)
 #define RCC_APB1Periph_TIM4             RCC_APB1ENR_TIM4
 #define RCC_APB1Periph_UART3            RCC_APB1ENR_UART3
 #define RCC_APB1Periph_BKP              RCC_APB1ENR_BKP
@@ -942,7 +942,7 @@
 #define RCC_APB1Periph_I2C2             RCC_APB1ENR_I2C2
 #define RCC_APB1Periph_ALL              0x3AE64807
 #endif
-#if defined(__MT304) || defined(__MZ306)
+#if defined(__MM3N1) || defined(__MZ306)
 #define RCC_APB1Periph_USB              RCC_APB1ENR_USB
 #define RCC_APB1Periph_CAN              RCC_APB1ENR_CAN
 #endif

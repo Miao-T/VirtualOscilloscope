@@ -73,7 +73,7 @@ void GPIO_DeInit(GPIO_TypeDef* GPIOx)
 ////////////////////////////////////////////////////////////////////////////////
 void GPIO_AFIODeInit()
 {
-#if defined(__MT304)
+#if defined(__MM3N1)
     exRCC_APB2PeriphReset(RCC_APB2ENR_EXTI);
 #else
     #if defined(GPIOA)
@@ -103,13 +103,13 @@ void GPIO_AFIODeInit()
 ////////////////////////////////////////////////////////////////////////////////
 void GPIO_checkBKP(void)
 {
-#if defined(__MT304) || defined(__MT307) || defined(__MZ306) || defined(__MZ308)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ306) || defined(__MZ308)
 	u16 BKPBuff[BKP_NUMBER];
 	exBKP_Init();
 	for (u8 i = 0;i < BKP_NUMBER;i++) {
 		BKPBuff[i] = exBKP_ImmRead((BKPDR_Typedef)(BKP_DR1 + 0x04 * i));
 	}
-#if defined(__MT304) || defined(__MT307)
+#if defined(__MM3N1) || defined(__MT307)
 	BKP_DeInit();
 #endif
 #if defined(__MZ306) || defined(__MZ308)
@@ -314,7 +314,7 @@ void GPIO_PinLockConfig(GPIO_TypeDef* GPIOx, u16 pin)
 ///   		This parameter can be: ENABLE or DISABLE.
 /// @retval None.
 ////////////////////////////////////////////////////////////////////////////////
-#if defined(__MT304)
+#if defined(__MM3N1)
 void GPIO_PinRemapConfigSub(u32 remap, u32 mask, bool state)
 {
     if (state)  EXTI->MAPR = EXTI->MAPR & ~mask | remap & mask;
@@ -381,7 +381,7 @@ void GPIO_PinRemapConfig(u32 remap, FunctionalState newState)
 /// @note   The pin should be used for Digital IP.
 /// @retval None.
 ////////////////////////////////////////////////////////////////////////////////
-#if !defined(__MT304)
+#if !defined(__MM3N1)
 void GPIO_PinAFConfig(GPIO_TypeDef* GPIOx, u8 pin, u8 funcAF)
 {
 	u8 shift = (pin & 0x07) * 4;
@@ -404,7 +404,7 @@ void GPIO_PinAFConfig(GPIO_TypeDef* GPIOx, u8 pin, u8 funcAF)
 ////////////////////////////////////////////////////////////////////////////////
 void exGPIO_PinAFConfig(GPIO_TypeDef* GPIOx, u16 pin, s32 remap, s8 funcAF)
 {
-#if defined(__MT304)
+#if defined(__MM3N1)
 	if (remap > 0) {
 		COMMON_EnableIpClock(emCLOCK_EXTI);
 		GPIO_PinRemapConfig(remap, ENABLE);

@@ -35,7 +35,7 @@
 /// @addtogroup RTC_Exported_Functions
 /// @{
 
-#if defined(__MT304) || defined(__MZ310) // || defined(__MT307)
+#if defined(__MM3N1) || defined(__MZ310) // || defined(__MT307)
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief  Enables or disables the specified RTC interrupts.

@@ -67,7 +67,7 @@ typedef enum {
 #endif
 } BKPDR_Typedef;
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief Tamper_Pin_active_level
@@ -111,7 +111,7 @@ typedef enum {
 void BKP_WriteBackupRegister(BKPDR_Typedef BKP_DR, u16 Data);
 u16  BKP_ReadBackupRegister(BKPDR_Typedef BKP_DR);
 
-#if defined(__MT304) || defined(__MT307) || defined(__MZ310)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ310)
 void BKP_DeInit(void);
 void BKP_ClearFlag(void);
 void BKP_ClearITPendingBit(void);

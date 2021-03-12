@@ -51,7 +51,7 @@
 #define	PORT_AFPP			0x08
 #define	PORT_AFOD			0x0C
 
-#if defined(__MT304) || defined(__MZ309)
+#if defined(__MM3N1) || defined(__MZ309)
 	#define	PORT_10MHz		0x01
 	#define	PORT_20MHz		0x02
 	#define	PORT_50MHz		0x03

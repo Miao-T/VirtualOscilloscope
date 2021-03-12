@@ -68,7 +68,7 @@ void BSP_CAN_GPIO_Configure(CAN_Peli_TypeDef* CANx, bool remapEn, u8 remapIdx)
         }
 	}
 	RCC->APB2ENR |= RCC_APB2ENR_EXTI;
-#if defined(__MT304)
+#if defined(__MM3N1)
 	EXTI->MAPR   |= EXTI_MAPR_CAN;							// 1 << 2;
 #endif
 }

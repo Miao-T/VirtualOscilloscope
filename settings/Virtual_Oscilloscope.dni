@@ -1,13 +1,3 @@
-[Stack]
-FillEnabled=0
-OverflowWarningsEnabled=1
-WarningThreshold=90
-SpWarningsEnabled=1
-WarnLogOnly=1
-UseTrigger=1
-TriggerName=main
-LimitSize=0
-ByteLimit=50
 [InterruptLog]
 LogEnabled=0
 GraphEnabled=0
@@ -21,6 +11,18 @@ GraphEnabled=0
 ShowTimeLog=1
 SumEnabled=0
 ShowTimeSum=1
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[Disassemble mode]
+mode=0
 [Breakpoints2]
 Count=0
 [Interrupts]
@@ -34,31 +36,9 @@ Stop=1
 [Trace1]
 Enabled=0
 ShowSource=1
-[Simulator]
-Freq=10000000
-MultiCoreRunAll=1
-[DebugChecksum]
-Checksum=1833758685
-[Exceptions]
-StopOnUncaught=_ 0
-StopOnThrow=_ 0
-[CallStack]
-ShowArgs=0
-[Disassembly]
-MixedMode=1
-[watch_formats]
-Fmt0={W}42:warebuf	0	3
-[Log file]
-LoggingEnabled=_ 0
-LogFile=_ ""
-Category=_ 0
-[TermIOLog]
-LoggingEnabled=_ 0
-LogFile=_ ""
-[Disassemble mode]
-mode=0
-[Breakpoints]
-Count=0
 [Aliases]
 Count=0
 SuppressDialog=0
+[Simulator]
+Freq=10000000
+MultiCoreRunAll=1

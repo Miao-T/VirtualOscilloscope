@@ -10,6 +10,8 @@ C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\lib\startup\inc
 -I
 C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\user\inc
 -I
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\CMSIS\Include
+-I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\inc\c
@@ -21,16 +23,17 @@ C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\lib\HAL_lib\inc
 C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\lib\startup\inc
 -I
 C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\user\inc
+-I
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\CMSIS\Include
 -D__IAR=1
--D__MT304=1
--D__EX_UART=1
--D__NEW_FDS__=1
+-D__MM3N1=1
+-D__EX_ADC=1
 -D__MM32_MINIBOARD=1
 -DOVERTIME=0
 -DCLOCK=8000000
--D_USER_RESOURCE=1
+-D__USER_RESOURCE=1
 -D_SYS_RESOURCE_IT=1
--D__SYS_RESOURCE_POLLING=1
+-D_SYS_RESOURCE_POLLING=1
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

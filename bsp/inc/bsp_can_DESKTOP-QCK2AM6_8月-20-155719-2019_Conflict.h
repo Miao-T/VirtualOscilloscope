@@ -21,7 +21,7 @@
 #ifndef __BSP_CAN_H
 #define __BSP_CAN_H
 
-#if defined(__MT304) || defined(__MZ306)
+#if defined(__MM3N1) || defined(__MZ306)
 ////////////////////////////////////////////////////////////////////////////////
 /// @addtogroup MM32_Board_Support_Package
 /// @{

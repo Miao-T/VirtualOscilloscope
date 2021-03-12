@@ -43,7 +43,7 @@
 /// @brief  Output Maximum frequency selection
 ////////////////////////////////////////////////////////////////////////////////
 typedef enum {
-#if defined(__MT304) || defined(__MT307) || defined(__MZ309)
+#if defined(__MM3N1) || defined(__MT307) || defined(__MZ309)
     GPIO_Speed_10MHz = 1,  ///< Maximum speed is 10MHz
     GPIO_Speed_20MHz,      ///< Maximum speed is 20MHz
     GPIO_Speed_50MHz       ///< Maximum speed is 50MHz
@@ -188,7 +188,7 @@ bool GPIO_ReadOutputDataBit(GPIO_TypeDef* GPIOx, u16 pin);
 u16 GPIO_ReadInputData(GPIO_TypeDef* GPIOx);
 u16 GPIO_ReadOutputData(GPIO_TypeDef* GPIOx);
 
-#if defined(__MT304)
+#if defined(__MM3N1)
 void GPIO_PinRemapConfig(u32 GPIO_Remap, FunctionalState newState);
 #endif
 

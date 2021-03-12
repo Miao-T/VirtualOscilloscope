@@ -1,14 +1,13 @@
 ###############################################################################
 #
-# IAR ELF Linker V7.80.4.12462/W32 for ARM                11/Mar/2021  17:59:47
+# IAR ELF Linker V7.80.4.12462/W32 for ARM                12/Mar/2021  11:31:31
 # Copyright 2007-2017 IAR Systems AB.
 #
 #    Output file  =  
-#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Exe\Virtual_Oscilloscope.out
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Exe\Triangle_Wave.out
 #    Map file     =  
-#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\List\Virtual_Oscilloscope.map
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\List\Triangle_Wave.map
 #    Command line =  
-#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\adc_init.o
 #        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\bsp.o
 #        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\bsp_adc.o
 #        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\bsp_can.o
@@ -51,14 +50,13 @@
 #        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_uart.o
 #        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_uid.o
 #        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\HAL_wwdg.o
-#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\osc_main.o
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\osc_triangle.o
 #        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\startup_mm32.o
 #        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\system_mm32.o
-#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj\uart_init.o
 #        -o
-#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Exe\Virtual_Oscilloscope.out
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Exe\Triangle_Wave.out
 #        --map
-#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\List\Virtual_Oscilloscope.map
+#        C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\List\Triangle_Wave.map
 #        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
 #        7.5\arm\config\linker\MindMotion\MM32L37xxx.icf" --semihosting --entry
 #        __iar_program_start --vfe
@@ -92,12 +90,12 @@ initialize by copy { rw };
 "P1":                                     0xe82
   .text              ro code  0x080000f8  0x360  system_mm32.o [1]
   .text              ro code  0x08000458  0x25a  HAL_gpio.o [1]
-  .rodata            const    0x080006b2    0x2  osc_main.o [1]
+  .rodata            const    0x080006b2    0x2  osc_triangle.o [1]
   .text              ro code  0x080006b4   0x80  HAL_bkp.o [1]
   .text              ro code  0x08000734   0x78  common.o [1]
   .text              ro code  0x080007ac  0x160  HAL_rcc.o [1]
   .text              ro code  0x0800090c   0x7c  HAL_nvic.o [1]
-  .text              ro code  0x08000988  0x170  osc_main.o [1]
+  .text              ro code  0x08000988  0x170  osc_triangle.o [1]
   .text              ro code  0x08000af8   0xd8  HAL_uart.o [1]
   .text              ro code  0x08000bd0   0x60  bsp_uart.o [1]
   .text              ro code  0x08000c30   0x24  FltCmpGe.o [4]
@@ -105,7 +103,7 @@ initialize by copy { rw };
   .text              ro code  0x08000cd8   0xbc  bsp.o [1]
   .text              ro code  0x08000d94   0xd6  FltSub.o [4]
   .text              ro code  0x08000e6a   0x38  packbits_init_single.o [5]
-  .rodata            const    0x08000ea2    0x2  osc_main.o [1]
+  .rodata            const    0x08000ea2    0x2  osc_triangle.o [1]
   .text              ro code  0x08000ea4   0x28  data_init.o [5]
   .text              ro code  0x08000ecc   0x22  startup_mm32.o [1]
   .text              ro code  0x08000eee    0xc  cstartup_M.o [5]
@@ -121,7 +119,7 @@ initialize by copy { rw };
 "P2", part 1 of 2:                         0x44
   P2-1                        0x20000000   0x44  <Init block>
     .data            inited   0x20000000   0x10  HAL_rcc.o [1]
-    .data            inited   0x20000010   0x20  osc_main.o [1]
+    .data            inited   0x20000010   0x20  osc_triangle.o [1]
     .bss             inited   0x20000030    0x4  system_mm32.o [1]
     .bss             inited   0x20000034    0x4  system_mm32.o [1]
     .bss             inited   0x20000038    0x4  system_mm32.o [1]
@@ -167,7 +165,7 @@ C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj: [1]
     bsp.o                       188
     bsp_uart.o                   96
     common.o                    120
-    osc_main.o                  368       26       32
+    osc_triangle.o              368       26       32
     startup_mm32.o               34      248
     system_mm32.o               864       14       20
     -------------------------------------------------
@@ -222,7 +220,7 @@ Entry                      Address   Size  Type      Object
 ?main                   0x08000efd         Code  Gb  cmain.o [5]
 ADC1_2_IRQHandler       0x08000eed    0x2  Code  Wk  startup_mm32.o [1]
 AESEncrupt_IRQHandler   0x08000eed    0x2  Code  Wk  startup_mm32.o [1]
-AppTaskTick             0x08000a63   0x1e  Code  Gb  osc_main.o [1]
+AppTaskTick             0x08000a63   0x1e  Code  Gb  osc_triangle.o [1]
 AppTickPtr              0x2000003c    0x4  Data  Gb  system_mm32.o [1]
 BKP_DeInit              0x080006b5   0x10  Code  Gb  HAL_bkp.o [1]
 BSP_UART_GPIO_CONFIGURE
@@ -353,8 +351,8 @@ exBKP_Init              0x080006c5   0x1c  Code  Gb  HAL_bkp.o [1]
 exGPIO_PinAFConfig      0x08000699   0x1a  Code  Gb  HAL_gpio.o [1]
 exNVIC_Init             0x08000917   0x5e  Code  Gb  HAL_nvic.o [1]
 exit                    0x08000f17    0x4  Code  Gb  exit.o [3]
-initUART1_IT            0x08000989   0x68  Code  Gb  osc_main.o [1]
-main                    0x08000a81   0x4c  Code  Gb  osc_main.o [1]
+initUART1_IT            0x08000989   0x68  Code  Gb  osc_triangle.o [1]
+main                    0x08000a81   0x4c  Code  Gb  osc_triangle.o [1]
 nTimeOutCnt             0x20000030    0x4  Data  Gb  system_mm32.o [1]
 sysTickCnt              0x20000034    0x4  Data  Gb  system_mm32.o [1]
 sysTickFlag             0x20000041    0x1  Data  Gb  system_mm32.o [1]
@@ -362,10 +360,10 @@ sysTickFlag1mS          0x20000040    0x1  Data  Gb  system_mm32.o [1]
 tbPresc                 0x20000000   0x10  Data  Gb  HAL_rcc.o [1]
 tickCnt                 0x20000038    0x4  Data  Gb  system_mm32.o [1]
 tickFlag                0x20000042    0x1  Data  Gb  system_mm32.o [1]
-usart1_putbuff          0x08000a17   0x1a  Code  Gb  osc_main.o [1]
-usart1_send_char        0x080009f1   0x26  Code  Gb  osc_main.o [1]
-vcan_sendware           0x08000a31   0x32  Code  Gb  osc_main.o [1]
-warebuf                 0x20000010   0x20  Data  Gb  osc_main.o [1]
+usart1_putbuff          0x08000a17   0x1a  Code  Gb  osc_triangle.o [1]
+usart1_send_char        0x080009f1   0x26  Code  Gb  osc_triangle.o [1]
+vcan_sendware           0x08000a31   0x32  Code  Gb  osc_triangle.o [1]
+warebuf                 0x20000010   0x20  Data  Gb  osc_triangle.o [1]
 
 
 [1] = C:\Users\10058\Documents\mm32\GitHub\VirtualOscilloscope\Debug\Obj
