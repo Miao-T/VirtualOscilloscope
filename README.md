@@ -84,7 +84,7 @@ The following codes refer to [「顶点元」STM32使用虚拟示波器][oscillo
 
 ## <font color=#990000>CSDN</font>
 
-For more details, you could read [「Rose Island」山外多功能调试助手用作MM32虚拟示波器][rose island]
+For more details, please read [「Rose Island」山外多功能调试助手用作MM32虚拟示波器][rose island]
 
 [instructions]: https://wenku.baidu.com/view/a1300c6e59fb770bf78a6529647d27284b733799.html
 [oscilloscope]: https://blog.csdn.net/xiaoyuanwuhui/article/details/86350171
